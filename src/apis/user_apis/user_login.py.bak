@@ -1,0 +1,216 @@
+# -*- coding: utf-8 -*-
+from flask.views import MethodView
+from flask import Flask, request, make_response,redirect,ctx,g, jsonify, _request_ctx_stack
+from db.dborm.dborm import TblChargerCommand, TblChargerCommandH, TblChargerInfo, TblCharging, TblChargingH,TblUserBasicInfo, TblUserLoginInfo, TblUserPasswdInfo
+from db.dbinit import DBSession
+from db.redis_init import GlobalRedisAccess, g_rds_access
+from base.log import g_log
+import json
+import functools
+from apis.api_comm import *
+import datetime
+from base.comm_const import *
+import random
+from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy.exc import DBAPIError
+from redis.exceptions import RedisError
+
+'''
+from passlib.hash import bcrypt
+
+# Calculating a hash
+hash = bcrypt.encrypt(usersPassword, rounds=12)
+
+# Validating a hash
+if bcrypt.verify(usersPassword, hash):
+        # Login successful
+'''
+
+class BasePostClass(MethodView):
+    @staticmethod
+    def post():
+        log=g_log.get_sys_log()
+        rds = g_rds_access.get_rds()
+        db_session = g.db_session
+
+        print 'get here'
+        print g.db_session
+
+
+        inJsonData = json.loads(request.get_data())
+        phone_no = inJsonData['phone_no']
+        password = inJsonData['password']
+
+
+        '''
+        <todo> 校验参数
+        '''
+
+
+        log.debug('phone_no:[%s]' % phone_no)
+        print 'phone_no:[%s]' % phone_no
+        log.debug('password:[%s]' % password)
+        print 'password:[%s]' % password
+
+
+        now = datetime.datetime.now()
+ 
+        log_data = {
+            'service' : 'user_login',
+           }
+
+
+        user_passwd_info_query = db_session.query(TblUserPasswdInfo)
+        user_passwd_info = user_passwd_info_query.filter_by(phone_no=phone_no).first()
+        if user_passwd_info :
+            if password == user_passwd_info.password :
+                '''
+                 set user login
+                '''
+                user_login_info_query = db_session.query(TblUserLoginInfo)
+                user_passwd_info = user_login_info_query.filter_by(user_id=user_passwd_info.user_id).first()
+                if user_passwd_info :
+                    user_login_info_query.filter(TblUserLoginInfo.user_id==user_passwd_info.user_id).update({
+                                                                            TblUserLoginInfo.login_opt   : const.LOGIN_OPT_LOGIN,
+                                                                            TblUserLoginInfo.login_time  : now,
+                                                                            TblUserLoginInfo.upd_dttm    : now
+                                                                            })
+                    '''
+                     get session_id
+                    '''
+                    session_id = gen_session_id(phone_no, user_passwd_info.user_id)
+
+                    '''
+                     save user_id - session_id in redis
+                    '''
+                    ret = rds.set(user_passwd_info.user_id, session_id)
+                    if ret == False : 
+                        log.error("内存数据库错误")
+                        return ret_func_for_app(const.RET_SYS_ERROR, '', {}, log_data)
+                    
+
+                    #when get redis use next exception handler
+                    #except KeyError,e:
+                    #    print e
+                    #    print 'KeyError'
+
+
+                    log.debug("user:[%s] login successfully" % phone_no)
+                    print "user:[%s] login successfully" % phone_no
+
+
+                    log_data = {
+                        'user_id' : user_passwd_info.user_id,
+                        'service' : 'user_login',
+                    }
+
+
+
+                    return ret_func_for_app(const.RET_SUCCESS, '啦啦啦', {'user_id':user_passwd_info.user_id, 'session_id':session_id}, log_data)
+                else :
+                    log.error("tbl_user_login_info数据异常")
+                    return ret_func(const.RET_SYS_ERROR, '', {})
+            else :
+                return ret_func(const.RET_PASSWD_ERROR, '', {})
+        else :
+            #还未注册
+            return ret_func(const.RET_PHONE_NO_NOT_EXIST, '', {})
+
+
+'''
+功能：用户正常登录
+1. 验证密码是否正确
+2. 置为登录，更新至登录表
+3. 生成session_id 并更新至redis
+4. 返回登录成功报文
+输入：
+phone_no password
+输出:
+各种报文
+作者：郭祖龙、郑哲渊
+'''
+
+class user_login(MethodView):
+
+    def post(self):
+        log=g_log.get_sys_log()
+        rds = g_rds_access.get_rds()
+        db_session = DBSession()
+        inJsonData = json.loads(request.get_data())
+        phone_no = inJsonData['phone_no']
+        password = inJsonData['password']
+
+
+        log.debug('phone_no:[%s]' % phone_no)
+        log.debug('password:[%s]' % password)
+
+        now = datetime.datetime.now()
+
+        try :
+            user_passwd_info = db_session.query(TblUserPasswdInfo).filter(TblUserPasswdInfo.phone_no == phone_no).first()
+            if user_passwd_info :
+                if password == user_passwd_info.password :
+                    '''
+                     set user login
+                    '''
+                    user_passwd_info = db_session.query(TblUserLoginInfo).filter(TblUserLoginInfo.user_id == user_passwd_info.user_id).first()
+                    if user_passwd_info :
+                        user_login_info_query.filter(TblUserLoginInfo.user_id==user_passwd_info.user_id).update({
+                                                                                TblUserLoginInfo.login_opt   : const.LOGIN_OPT_LOGIN,
+                                                                                TblUserLoginInfo.login_time  : now,
+                                                                                TblUserLoginInfo.upd_dttm    : now
+                                                                                })
+                        '''
+                         get session_id
+                        '''
+                        session_id = gen_session_id(phone_no, user_passwd_info.user_id)
+
+                        '''
+                         save user_id - session_id in redis
+                         将内层的try..except改为外层，多一个对抛出异常的处理就行
+         所有的else 都加上rollback（）          
+                        '''
+                       
+                        ret = rds.set(user_passwd_info.user_id, session_id)
+                        if ret == False : 
+                            db_session.rollback()
+                            return ret_func(const.RET_MEMDB_ERROR, '', {})
+                        
+
+                        #when get redis use next exception handler
+                        #except KeyError,e:
+                        #    print e
+                        #    print 'KeyError'
+
+                        db_session.commit()
+
+                        log.debug("user:[%s] login successfully" % phone_no)
+
+                        return ret_func(const.RET_SUCCESS, '', {'user_id':user_passwd_info.user_id, 'session_id':session_id})
+                    else :
+                        #那就是在注册方法中直接新增记录，注册完就登录
+                        db_session.rollback()
+                        return ret_func(const.RET_SYS_ERROR, '', {})
+                else :
+                    db_session.rollback()
+                    return ret_func(const.RET_PASSWD_ERROR, '', {})
+            else :
+                db_session.rollback()
+                #还未注册
+                return ret_func(const.RET_PHONE_NO_NOT_EXIST, '', {})
+
+        except SQLAlchemyError, e :
+            print type(e)
+            log.debug(e)
+            db_session.rollback()
+            return ret_func(const.RET_DB_ERROR, '', {})
+        except RedisError,e:
+            print type(e)
+            log.debug(e)
+            db_session.rollback()
+            return ret_func(const.RET_MEMDB_ERROR, '', {})
+
+        finally :
+            db_session.close()
+
+

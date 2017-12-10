@@ -1,0 +1,158 @@
+MainThread 11:50:34 flask_base.py[line:14] INFO flask_init
+MainThread 11:51:00 flask_base.py[line:14] INFO flask_init
+MainThread 12:09:44 flask_base.py[line:14] INFO flask_init
+MainThread 12:09:44 flask_base.py[line:14] INFO flask_init
+Thread-1 12:11:47 flask_base.py[line:45] INFO 交易唯一戳[12114700000004]:类型[REQ]:时间[121147]:交易时长[0]毫秒:请求url[http://127.0.0.1:9999/apis/request_route_handler/user_apis/user_get_info]:请求头[User-Agent: curl/7.54.0
+Host: 127.0.0.1:9999
+Accept: */*
+
+]:请求数据[]
+Thread-1 12:11:47 flask_base.py[line:146] ERROR 500发生异常
+Thread-1 12:11:47 flask_base.py[line:97] INFO 交易唯一戳[12114700000004]:类型[RSP]:时间[121147]:交易时长[0.01103s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 12:11:47 flask_base.py[line:125] ERROR Traceback (most recent call last):
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "/Users/spy0578/lab/micro_office/src/apis/request_route_handler.py", line 63, in get
+    return base(route_root, route_name)
+NameError: global name 'base' is not defined
+
+MainThread 12:12:05 flask_base.py[line:14] INFO flask_init
+Thread-1 12:12:09 flask_base.py[line:45] INFO 交易唯一戳[12120900000005]:类型[REQ]:时间[121209]:交易时长[0]毫秒:请求url[http://127.0.0.1:9999/apis/request_route_handler/user_apis/user_get_info]:请求头[User-Agent: curl/7.54.0
+Host: 127.0.0.1:9999
+Accept: */*
+
+]:请求数据[]
+Thread-1 12:12:09 user_get_info.py[line:48] INFO request.get_data():[]
+Thread-1 12:12:09 user_get_info.py[line:49] INFO user_get_info get
+Thread-1 12:12:09 flask_base.py[line:146] ERROR 500发生异常
+Thread-1 12:12:09 flask_base.py[line:97] INFO 交易唯一戳[12120900000005]:类型[RSP]:时间[121209]:交易时长[0.00978s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 12:12:09 flask_base.py[line:125] ERROR Traceback (most recent call last):
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1615, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1630, in finalize_request
+    response = self.make_response(rv)
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1725, in make_response
+    raise ValueError('View function did not return a response')
+ValueError: View function did not return a response
+
+MainThread 12:12:40 flask_base.py[line:14] INFO flask_init
+MainThread 12:13:15 flask_base.py[line:14] INFO flask_init
+MainThread 12:13:28 flask_base.py[line:14] INFO flask_init
+Thread-1 12:13:32 flask_base.py[line:45] INFO 交易唯一戳[12133200000006]:类型[REQ]:时间[121332]:交易时长[0]毫秒:请求url[http://127.0.0.1:9999/apis/request_route_handler/user_apis/user_get_info]:请求头[User-Agent: curl/7.54.0
+Host: 127.0.0.1:9999
+Accept: */*
+
+]:请求数据[]
+Thread-1 12:13:32 flask_base.py[line:146] ERROR 500发生异常
+Thread-1 12:13:32 flask_base.py[line:97] INFO 交易唯一戳[12133200000006]:类型[RSP]:时间[121332]:交易时长[0.00631s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 12:13:32 flask_base.py[line:125] ERROR Traceback (most recent call last):
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "/Users/spy0578/lab/micro_office/src/apis/request_route_handler.py", line 64, in get
+    return base(self, route_root, route_name)
+NameError: global name 'base' is not defined
+
+MainThread 12:13:40 flask_base.py[line:14] INFO flask_init
+Thread-1 12:13:41 flask_base.py[line:45] INFO 交易唯一戳[12134100000007]:类型[REQ]:时间[121341]:交易时长[0]毫秒:请求url[http://127.0.0.1:9999/apis/request_route_handler/user_apis/user_get_info]:请求头[User-Agent: curl/7.54.0
+Host: 127.0.0.1:9999
+Accept: */*
+
+]:请求数据[]
+Thread-1 12:13:41 flask_base.py[line:146] ERROR 500发生异常
+Thread-1 12:13:41 flask_base.py[line:97] INFO 交易唯一戳[12134100000007]:类型[RSP]:时间[121341]:交易时长[0.00489s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 12:13:41 flask_base.py[line:125] ERROR Traceback (most recent call last):
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/Users/spy0578/lab/test_env/lib/python2.7/site-packages/flask/views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "/Users/spy0578/lab/micro_office/src/apis/request_route_handler.py", line 64, in get
+    return self.base(self, route_root, route_name)
+TypeError: base() takes exactly 3 arguments (4 given)
+
+MainThread 12:13:49 flask_base.py[line:14] INFO flask_init
+Thread-1 12:13:52 flask_base.py[line:45] INFO 交易唯一戳[12135200000008]:类型[REQ]:时间[121352]:交易时长[0]毫秒:请求url[http://127.0.0.1:9999/apis/request_route_handler/user_apis/user_get_info]:请求头[User-Agent: curl/7.54.0
+Host: 127.0.0.1:9999
+Accept: */*
+
+]:请求数据[]
+Thread-1 12:13:52 user_get_info.py[line:48] INFO request.get_data():[]
+Thread-1 12:13:52 user_get_info.py[line:49] INFO user_get_info get
+Thread-1 12:13:52 flask_base.py[line:97] INFO 交易唯一戳[12135200000008]:类型[RSP]:时间[121352]:交易时长[0.00548s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 90
+
+]:响应数据[{"header": {"message": "\u6210\u529f", "code": "00000", "description": ""}, "data": "get"}]
+MainThread 12:42:16 flask_base.py[line:14] INFO flask_init
+Thread-1 12:42:21 flask_base.py[line:45] INFO 交易唯一戳[12422100000009]:类型[REQ]:时间[124221]:交易时长[0]毫秒:请求url[http://127.0.0.1:9999/apis/request_route_handler/user_apis/user_get_info]:请求头[User-Agent: curl/7.54.0
+Host: 127.0.0.1:9999
+Accept: */*
+
+]:请求数据[]
+Thread-1 12:42:21 user_get_info.py[line:48] INFO request.get_data():[]
+Thread-1 12:42:21 user_get_info.py[line:49] INFO user_get_info get
+Thread-1 12:42:21 flask_base.py[line:97] INFO 交易唯一戳[12422100000009]:类型[RSP]:时间[124221]:交易时长[0.00542s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 90
+
+]:响应数据[{"header": {"message": "\u6210\u529f", "code": "00000", "description": ""}, "data": "get"}]
+MainThread 12:42:56 flask_base.py[line:14] INFO flask_init
+MainThread 12:45:12 flask_base.py[line:14] INFO flask_init
+MainThread 12:45:16 flask_base.py[line:14] INFO flask_init
+MainThread 12:45:16 flask_base.py[line:14] INFO flask_init
+Thread-1 12:45:19 flask_base.py[line:45] INFO 交易唯一戳[12451900000010]:类型[REQ]:时间[124519]:交易时长[0]毫秒:请求url[http://127.0.0.1:9999/apis/request_route_handler/user_apis/user_get_info]:请求头[User-Agent: curl/7.54.0
+Host: 127.0.0.1:9999
+Accept: */*
+
+]:请求数据[]
+Thread-1 12:45:19 user_get_info.py[line:48] INFO request.get_data():[]
+Thread-1 12:45:19 user_get_info.py[line:49] INFO user_get_info get
+Thread-1 12:45:19 flask_base.py[line:97] INFO 交易唯一戳[12451900000010]:类型[RSP]:时间[124519]:交易时长[0.00497s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 90
+
+]:响应数据[{"header": {"message": "\u6210\u529f", "code": "00000", "description": ""}, "data": "get"}]

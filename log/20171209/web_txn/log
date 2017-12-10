@@ -1,0 +1,26 @@
+MainThread 22:29:11 flask_base.py[line:14] INFO flask_init
+MainThread 22:29:11 flask_base.py[line:14] INFO flask_init
+MainThread 22:46:07 flask_base.py[line:14] INFO flask_init
+MainThread 22:46:55 flask_base.py[line:14] INFO flask_init
+Thread-1 22:47:03 flask_base.py[line:45] INFO 交易唯一戳[22470300000002]:类型[REQ]:时间[224703]:交易时长[0]毫秒:请求url[http://127.0.0.1:9999/apis/request_route_handler/user_apis/user_get_info]:请求头[User-Agent: curl/7.54.0
+Host: 127.0.0.1:9999
+Accept: */*
+
+]:请求数据[]
+Thread-1 22:47:03 user_get_info.py[line:48] INFO request.get_data():[]
+Thread-1 22:47:03 user_get_info.py[line:49] INFO user_get_info get
+Thread-1 22:47:03 flask_base.py[line:97] INFO 交易唯一戳[22470300000002]:类型[RSP]:时间[224703]:交易时长[0.00503s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 90
+
+]:响应数据[{"header": {"message": "\u6210\u529f", "code": "00000", "description": ""}, "data": "get"}]
+Thread-1 22:50:17 flask_base.py[line:45] INFO 交易唯一戳[22501700000003]:类型[REQ]:时间[225017]:交易时长[0]毫秒:请求url[http://127.0.0.1:9999/apis/request_route_handler/user_apis/user_get_info]:请求头[User-Agent: curl/7.54.0
+Host: 127.0.0.1:9999
+Accept: */*
+
+]:请求数据[]
+Thread-1 22:50:17 user_get_info.py[line:48] INFO request.get_data():[]
+Thread-1 22:50:17 user_get_info.py[line:49] INFO user_get_info get
+Thread-1 22:50:17 flask_base.py[line:97] INFO 交易唯一戳[22501700000003]:类型[RSP]:时间[225017]:交易时长[0.00219s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 90
+
+]:响应数据[{"header": {"message": "\u6210\u529f", "code": "00000", "description": ""}, "data": "get"}]

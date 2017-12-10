@@ -1,0 +1,106 @@
+# -*- coding: utf-8 -*-
+from flask.views import MethodView
+from flask import Flask, request, make_response,redirect,ctx,g, jsonify, _request_ctx_stack
+from db.dborm.dborm import TblChargerCommand, TblChargerCommandH, TblChargerInfo, TblCharging, TblChargingH,TblUserBasicInfo
+from db.dbinit import DBSession
+from db.redis_init import GlobalRedisAccess, g_rds_access
+from base.log import g_txn_log
+import json
+import functools
+from apis.api_comm import *
+import datetime
+from base.comm_const import *
+import random
+from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy.exc import DBAPIError
+from redis.exceptions import RedisError
+
+
+'''
+功能：获取用户基本信息
+1. 检验session_id是否正确
+2. 获取用户基本信息
+输入：
+user_id session_id
+输出：
+用户信息
+'''
+class BaseGetClass(MethodView):
+    @staticmethod
+    def get():
+        print 'get here'
+        print g.db_session
+
+        print 'request.args:', request.args
+        parameters = request.args
+
+        if parameters is None:
+            '''
+             上送报文错误
+            '''
+            return ret_func(const.RET_ARG_ERROR, '', {})
+
+
+
+        '''
+         分隔符为&，截取字符串
+        '''
+        param_dict = parameters.to_dict()
+        print param_dict['user_id']
+
+        user_id = param_dict['user_id']
+        session_id = param_dict['session_id']
+
+        
+        '''
+         <todo>日志批处理需要增加：判断是否长时间未使用，则自动退出登录，设置session无效
+        '''
+
+        db_session = g.db_session
+        check_ret = check_session_id(user_id, session_id)
+        if check_ret == const.REDIS_SESSION_ID_CORRECT :
+            user_basic_info_query = db_session.query(TblUserBasicInfo).filter(TblUserBasicInfo.user_id==user_id)
+        else :
+            return ret_func(check_ret, '', {})
+        user_basic_info = db_session.query(TblUserBasicInfo).filter(TblUserBasicInfo.user_id==user_id).first()
+
+        data = {
+                'phone_no'       : str(user_basic_info.phone_no),
+                'nickname'       : str(user_basic_info.nickname),
+                'name'           : str(user_basic_info.name)
+                }
+
+
+
+        return ret_func(const.RET_SUCCESS, '', data)
+        
+
+'''
+class user_get_info(MethodView) :
+    def get(self, user_id, session_id) :
+        log=g_txn_log.get_sys_log()
+
+        
+        log.debug('user_id:[%s]'% user_id)
+        log.debug('message_id:[%s]'% session_id)
+        try :
+            db_session = DBSession()
+            check_ret = check_session_id(user_id, session_id)
+            if check_ret == REDIS_session_id_correct :
+                user_basic_info = db_session.query(TblUserBasicInfo).filter(TblUserBasicInfo.user_id==user_id).first()
+                return ret_func(const.RET_SUCCESS, '', {'user':user_basic_info.to_json()})
+            else :
+                return ret_func(check_ret, '', {})
+        except SQLAlchemyError, e :
+            print type(e)
+            log.debug(e)
+            db_session.rollback()
+            return ret_func(const.RET_DB_ERROR, '', {})
+        except RedisError, e:
+            print type(e)
+            log.debug(e)
+            db_session.rollback()
+            return ret_func(const.RET_MEMDB_ERROR, '', {})
+        finally :
+            db_session.close()
+'''

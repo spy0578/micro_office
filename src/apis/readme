@@ -1,0 +1,10 @@
+#####FOR APP######
+user_apis: 用户信息相关
+charger_apis: 充电桩控制
+html_apis: html访问
+
+
+
+
+#####FOR CHARGER#####
+charger_heart_beat: 充电桩心跳
