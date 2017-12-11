@@ -110,8 +110,8 @@ def get_ret_code(ret_json_data):
 
 def ret_func(code, description, data):
     #arguments: data must be json
-    #<todo> get message according to code
     #return jsonify({'header':{'code':code, 'message':'', 'description':description}, 'data':data})
+ 
     return json.dumps({'header':{'code':code, 'message':get_code_msg(code), 'description':description}, 'data':data})
 
 def get_code_msg(code):

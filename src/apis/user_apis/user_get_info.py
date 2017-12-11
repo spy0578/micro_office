@@ -48,4 +48,7 @@ class BaseGetClass(MethodView):
         log.info('request.get_data():[%s]' % request.get_data())
         log.info('user_get_info get')
 
-        return True, ret_func(const.RET_SUCCESS, '', 'get')
+        ol_log_info = {'aaa':'bbb'}
+
+        #返回给request_route_handler的get方法
+        return True, ol_log_info, ret_func(const.RET_SUCCESS, '', 'get')
