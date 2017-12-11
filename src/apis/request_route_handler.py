@@ -10,6 +10,7 @@ from base.comm_const import *
 import random
 import importlib
 from base.log import g_log
+from db.dborm.dborm import TblOlLogInfo
 
 '''
 功能：
@@ -61,13 +62,27 @@ class RequestRouteHandler(MethodView):
                             if ol_log_info.has_key('user_id') else '0'
             service        = ol_log_info['service'] \
                             if ol_log_info.has_key('service') else ' '
-            ret_code       = module_ret['header']['code']
-            remark         = module_ret['description']
+
+	    json_dict = json.loads(module_ret)
+            print json_dict['header']['code']
+            ret_code       = json_dict['header']['code']
+            remark         = json_dict['header']['description']
             last_upd_dttm  = datetime.datetime.now()
             record_stat    = '1'
 
             user_id = int(user_id)
             print ol_log_info
+
+            tbl_ol_log_info = TblOlLogInfo(user_id = user_id,
+                                   service = service,
+                                   ret_code  = ret_code,
+                                   remark     = remark,
+                                   last_upd_dttm   = last_upd_dttm,
+                                   record_stat   = const.RECORD_AVA)
+
+            g.db_session.add(tbl_ol_log_info)
+            g.db_session.flush() 
+            g.db_session.commit()
             
 
         if g.db_session != None:

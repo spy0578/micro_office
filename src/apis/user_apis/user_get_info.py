@@ -37,7 +37,7 @@ class BasePostClass(MethodView):
         log.info('request.get_data():[%s]' % request.get_data())
         log.info('user_get_info post')
 
-        return True, ret_func(const.RET_SUCCESS, '', 'post')
+        return True, {}, ret_func(const.RET_SUCCESS, '', 'post')
     
 class BaseGetClass(MethodView):    
     @staticmethod
@@ -48,7 +48,7 @@ class BaseGetClass(MethodView):
         log.info('request.get_data():[%s]' % request.get_data())
         log.info('user_get_info get')
 
-        ol_log_info = {'aaa':'bbb'}
+        ol_log_info = {"user_id":"111", "service":"user_get_info"}
 
         #返回给request_route_handler的get方法
         return True, ol_log_info, ret_func(const.RET_SUCCESS, '', 'get')

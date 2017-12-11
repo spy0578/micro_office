@@ -44,6 +44,7 @@ class DevelopmentConfig(Config):
     WEB_SERVER_LOG_LEVEL       = logging.DEBUG
     WEB_SERVER_LOG_FILE_NAME   = os.environ.get('WEB_SERVER_LOG_FILE_NAME') or \
                                      'log'
+    print 'sysstr:%s' % Config.sysstr
     if(Config.sysstr =="Windows"):
         print ("Windows")
         WEB_SERVER_LOG_FILE_DIR_PRE = os.environ.get('WEB_SERVER_LOG_FILE_DIR_PRE') or \
