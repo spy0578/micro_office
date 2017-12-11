@@ -1,6 +1,7 @@
 #-*- coding:utf-8 -*-
 import logging
 import os
+import platform
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'hard to guess string' 
@@ -8,6 +9,7 @@ class Config:
     FLASKY_MAIL_SUBJECT_PREFIX = '[Flasky]'
     FLASKY_MAIL_SENDER = 'Flasky Admin <flasky@example.com>' 
     FLASKY_ADMIN = os.environ.get('FLASKY_ADMIN')
+    sysstr = platform.system()
     
     @staticmethod
     def init_app(app): 
@@ -23,7 +25,7 @@ class DevelopmentConfig(Config):
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD') 
 
     SQLALCHEMY_URI              = os.environ.get('DEV_SQLALCHEMY_URL') or \
-                                                 'sqlite:///./sqlalchemy.db'
+                                                 'sqlite:///../db/sqlalchemy.db'
 
     REDIS_URI       = os.environ.get('DEV_REDIS_URI') or \
                                      '127.0.0.1'
@@ -42,8 +44,14 @@ class DevelopmentConfig(Config):
     WEB_SERVER_LOG_LEVEL       = logging.DEBUG
     WEB_SERVER_LOG_FILE_NAME   = os.environ.get('WEB_SERVER_LOG_FILE_NAME') or \
                                      'log'
-    WEB_SERVER_LOG_FILE_DIR_PRE   = os.environ.get('WEB_SERVER_LOG_FILE_DIR_PRE') or \
-                                     '/Users/spy0578/lab/micro_office/log'
+    if(Config.sysstr =="Windows"):
+        print ("Windows")
+        WEB_SERVER_LOG_FILE_DIR_PRE = os.environ.get('WEB_SERVER_LOG_FILE_DIR_PRE') or \
+                               'E:\work_project\git_micro_office\micro_office\log'        
+    else:
+        print ("others")
+        WEB_SERVER_LOG_FILE_DIR_PRE = os.environ.get('WEB_SERVER_LOG_FILE_DIR_PRE') or \
+                                         '/Users/spy0578/lab/micro_office/log'
     WEB_SERVER_LOG_FILE_DIR_POST  = os.environ.get('WEB_SERVER_LOG_FILE_DIR_POST') or \
                                      'web_txn'
 
