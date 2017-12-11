@@ -47,19 +47,6 @@ class DevelopmentConfig(Config):
     WEB_SERVER_LOG_FILE_DIR_POST  = os.environ.get('WEB_SERVER_LOG_FILE_DIR_POST') or \
                                      'web_txn'
 
-    '''
-     chargerserver.py 日志参数配置
-     LOG_FILE_DIR=LOG_FILE_DIR_PRE+DATE+LOG_FILE_DIR_POST
-    '''
-    CHG_SERVER_LOG_LEVEL       = logging.DEBUG
-    CHG_SERVER_LOG_FILE_NAME   = os.environ.get('CHG_SERVER_LOG_FILE_NAME') or \
-                                     'log'
-    CHG_SERVER_LOG_FILE_DIR_PRE   = os.environ.get('CHG_SERVER_LOG_FILE_DIR_PRE') or \
-                                     '/dvlp/ichrg_repos/log'
-    CHG_SERVER_LOG_FILE_DIR_POST  = os.environ.get('CHG_SERVER_LOG_FILE_DIR_POST') or \
-                                     'chg_txn'
-
-
 
 class TestingConfig(Config): 
     SQLALCHEMY_DATABASE_URI = os.environ.get('TEST_DATABASE_URL') 
