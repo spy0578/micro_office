@@ -39,11 +39,9 @@ class RequestRouteHandler(MethodView):
          <todo> 根据模块名module可以增加一些处理
         '''
         
-	#初始化交易流程中的全局变量
         g.db_session = DBSession()
-	g.log = g_log.get_sys_log()
-	g.rds = g_rds_access.get_plat_rds()
 
+        log = g_log.get_sys_log()
 
         #使用静态调用
         ret_flag, ol_log_info, module_ret = module.BaseGetClass().get()
@@ -55,7 +53,7 @@ class RequestRouteHandler(MethodView):
 
         #如果不为空，则登记流水表
         if ol_log_info:
-            g.log.info("ol_log_info:%s", ol_log_info)
+            log.info("ol_log_info:%s", ol_log_info)
 
 
             user_id        = ol_log_info['user_id'] \
@@ -63,7 +61,7 @@ class RequestRouteHandler(MethodView):
             service        = ol_log_info['service'] \
                             if ol_log_info.has_key('service') else ' '
 
-	    json_dict = json.loads(module_ret)
+            json_dict = json.loads(module_ret)
             print json_dict['header']['code']
             ret_code       = json_dict['header']['code']
             remark         = json_dict['header']['description']

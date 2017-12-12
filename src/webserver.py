@@ -18,9 +18,9 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 app = Flask(__name__)
-app.debug = True
-app.template_folder = '/dvlp/ichrg_repos/templates'
 
+app.debug = True
+app.template_folder = configs[config_type].STATIC_TEMPLATE_FOLDER
 
 
 '''

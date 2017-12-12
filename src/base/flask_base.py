@@ -6,12 +6,14 @@ from apis.api_comm import *
 import traceback
 from log import g_log
 from apis.request_route_handler import *
+from apis.static_request_route_handler import *
 
 
 def flask_init(app):
     log=g_log.get_sys_log()
     
     log.info('flask_init')
+    
 
 
     '''
@@ -20,6 +22,10 @@ def flask_init(app):
     request_route_handler_view = RequestRouteHandler.as_view('request_route_handler')
     app.add_url_rule('/apis/request_route_handler/<route_root>/<route_name>'
                              , view_func=request_route_handler_view, methods=['GET', 'POST', 'PUT'])
+
+    static_request_route_handler_view = StaticRequestRouteHandler.as_view('static_request_route_handler')
+    app.add_url_rule('/<path:filename>'
+                             , view_func=static_request_route_handler_view, methods=['GET'])
 
 
 

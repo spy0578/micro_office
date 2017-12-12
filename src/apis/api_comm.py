@@ -115,7 +115,7 @@ def ret_func(code, description, data):
     return json.dumps({'header':{'code':code, 'message':get_code_msg(code), 'description':description}, 'data':data})
 
 def get_code_msg(code):
-    rds = g.rds
+    rds = g_rds_access.get_plat_rds()
     try :
         msg = rds.hgetall('RET_CODE')[code]
         return msg
@@ -150,7 +150,18 @@ def get_txn_end_log(response):
     now_hms = now.strftime('%H%M%S')
 
 
-    return "交易唯一戳[%s]:类型[RSP]:时间[%s]:交易时长[%s]毫秒:响应头[%s]:响应数据[%s]" %  \
+    g_log.get_sys_log().info(response)
+    g_log.get_sys_log().info(type(response))
+    g_log.get_sys_log().info(response.headers)
+    
+    try :
+        g_log.get_sys_log().info(response.data)
+    except Exception, e:
+        g_log.get_sys_log().info(e)
+        return "交易唯一戳[%s]:类型[RSP]:时间[%s]:交易时长[%s]毫秒:响应头[%s]" %  \
+                    (now_hms+get_curr_sn(), now_hms, diff, response.headers)        
+    else:
+        return "交易唯一戳[%s]:类型[RSP]:时间[%s]:交易时长[%s]毫秒:响应头[%s]:响应数据[%s]" %  \
                     (now_hms+get_curr_sn(), now_hms, diff, response.headers, response.data)
 
 

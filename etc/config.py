@@ -48,11 +48,19 @@ class DevelopmentConfig(Config):
     if(Config.sysstr =="Windows"):
         print ("Windows")
         WEB_SERVER_LOG_FILE_DIR_PRE = os.environ.get('WEB_SERVER_LOG_FILE_DIR_PRE') or \
-                               'E:\work_project\git_micro_office\micro_office\log'        
+                               'E:\work_project\micro_office\log'
+
+        STATIC_TEMPLATE_FOLDER = os.environ.get('STATIC_TEMPLATE_FOLDER') or \
+                               'E:\work_project\micro_office\web'
+        
     else:
         print ("others")
         WEB_SERVER_LOG_FILE_DIR_PRE = os.environ.get('WEB_SERVER_LOG_FILE_DIR_PRE') or \
                                          '/Users/spy0578/lab/micro_office/log'
+
+        STATIC_TEMPLATE_FOLDER = os.environ.get('STATIC_TEMPLATE_FOLDER') or \
+                                         '/Users/spy0578/lab/micro_office/web'
+
     WEB_SERVER_LOG_FILE_DIR_POST  = os.environ.get('WEB_SERVER_LOG_FILE_DIR_POST') or \
                                      'web_txn'
 
