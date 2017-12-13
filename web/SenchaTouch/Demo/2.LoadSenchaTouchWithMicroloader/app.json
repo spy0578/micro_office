@@ -1,0 +1,44 @@
+{
+    "name": "Demo",  // app名称
+    "js": [
+        {
+            "path": "../../SenchaTouch/2.0.0/sencha-touch-all-debug.js"  // 引用的ST框架文件，这里我们选用all模式
+        },
+        {
+            "path": "app.js",  // 引用的应用程序代码文件
+            "update": "delta"
+        }
+    ],
+    "css": [
+        {
+            "path": "../../SenchaTouch/2.0.0/css/sencha-touch.css",  // 引用的css文件
+            "update": "delta"
+        }
+    ],
+    "appCache": {
+        "cache": [
+            "JsCodeBehind.html",
+            "JsCodeInline.html"
+        ],
+        "network": [
+            "*"
+        ],
+        "fallback": []
+    },
+    "extras": [
+    ],
+    "archivePath": "archive",
+    "buildPaths": {
+        "testing": "../../deploy/testing/Demo",
+        "production": "../../deploy/production/Demo",
+        "package": "../../deploy/package/Demo",
+        "native": "../../deploy/native/Demo"
+    },
+    "buildOptions": {
+        "product": "touch",
+        "minVersion": 3,
+        "debug": false,
+        "logger": "no"
+    },
+    "id": "3a867610-670a-11e1-a90e-4318029d18bb"
+}

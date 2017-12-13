@@ -36,7 +36,11 @@ class BasePostClass(MethodView):
         db_session = g.db_session
 
         log.info('request.get_data():[%s]' % request.get_data())
-        log.info('user_get_info post')
+        print 'user_get_info post'
+
+        inJsonData = json.loads(request.get_data())
+        phone_no = inJsonData['name']
+        password = inJsonData['password']
 
         return True, {}, ret_func(const.RET_SUCCESS, '', 'post')
     
@@ -46,8 +50,23 @@ class BaseGetClass(MethodView):
         log=g_log.get_sys_log()
         db_session = g.db_session
 
+
         log.info('request.get_data():[%s]' % request.get_data())
-        log.info('user_get_info get')
+        print 'user_get_info get'
+
+        print 'request.args:', request.args
+        parameters = request.args
+
+        '''
+         分隔符为&，截取字符串
+        '''
+        param_dict = parameters.to_dict()
+
+        name = param_dict['name']
+        password = param_dict['password']
+
+        print name, password
+
 
         ol_log_info = {"user_id":"111", "service":"user_get_info"}
 
