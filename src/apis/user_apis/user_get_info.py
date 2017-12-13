@@ -35,12 +35,15 @@ class BasePostClass(MethodView):
         log=g_log.get_sys_log()
         db_session = g.db_session
 
-        log.info('request.get_data():[%s]' % request.get_data())
+        print 'request.get_data():[%s]' % request.get_data()
+        print 'request.form:[%s]' % request.form
+        print 'request.data:[%s]' % request.data
         print 'user_get_info post'
 
-        inJsonData = json.loads(request.get_data())
-        phone_no = inJsonData['name']
-        password = inJsonData['password']
+        parameters = request.form
+        param_dict = parameters.to_dict()
+        phone_no = param_dict['name']
+        password = param_dict['password']
 
         return True, {}, ret_func(const.RET_SUCCESS, '', 'post')
     

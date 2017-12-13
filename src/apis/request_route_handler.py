@@ -20,7 +20,7 @@ from db.dborm.dborm import TblOlLogInfo
 '''
 
 class RequestRouteHandler(MethodView):
-    def base(self, route_root, route_name, func_name):
+    def base(self, route_root, route_name, class_func_name):
 	print route_root
         print route_name
 
@@ -44,7 +44,7 @@ class RequestRouteHandler(MethodView):
         log = g_log.get_sys_log()
 
         #使用静态调用
-        ret_flag, ol_log_info, module_ret = module.BaseGetClass().globals().get('%s' % func_name)()
+        ret_flag, ol_log_info, module_ret = eval(class_func_name)()
 
         if ret_flag is True:
             g.db_session.commit()
@@ -90,11 +90,11 @@ class RequestRouteHandler(MethodView):
 
 
     def get(self, route_root, route_name):
-        return self.base(route_root, route_name, 'get')
+        return self.base(route_root, route_name, 'module.BaseGetClass.get')
 
 
     def post(self, route_root, route_name):
-        return self.base(route_root, route_name, 'post')
+        return self.base(route_root, route_name, 'module.BasePostClass.post')
 
     def put(self, route_root, route_name):
-        return self.base(route_root, route_name, 'put')
+        return self.base(route_root, route_name, 'module.BasePutClass.put')

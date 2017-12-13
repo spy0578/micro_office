@@ -2,9 +2,41 @@
         name: 'sample',  
       
         launch: function() {  
-            var formPanel = Ext.create('Ext.form.Panel', {  
-                fullscreen: true,  
+            Ext.Msg.defaultAllowedConfig.showAnimation = false;
+            Ext.Msg.defaultAllowedConfig.hideAnimation = false;
+            var tabPanel = Ext.create("Ext.tab.Panel", {
+                fullscreen: true,
+                tabBarPosition: 'bottom',
+
+                defaults: {  
+                    styleHtmlContent: true,  
+                    tabBarPosition: 'bottom',  
+                },  
               
+                layout: {  
+                    type: 'card',  
+                    animation: {  
+                        type: 'fade'  
+                    }  
+                },      
+                
+                items: [  
+                    {  
+                        title: 'Home',  
+                        iconCls: 'home',  
+                        html: 'Home Screen'  
+                    },  
+                    {  
+                        title: 'Contact',  
+                        iconCls: 'user',  
+                        html: 'Contact Screen'  
+                    }  
+                ]              
+            });        
+            var formPanel = Ext.create('Ext.form.Panel', {  
+                title: 'presidents',
+                iconCls: 'team',
+
                 items: [{  
                     xtype: 'fieldset',  
                     items: [  
@@ -73,7 +105,7 @@
                                 }, 
                                 success: function(response) {  
                                     console.log(response);
-                                    //alert('form submitted successfully!');  
+                                    Ext.Msg.alert("fff");
                                 },
                                 failure: function(response, opts) {  
                                     console.log(response);
@@ -84,5 +116,6 @@
                     }  
                 ]  
             });  
+            tabPanel.add(formPanel);
         }  
     });  
