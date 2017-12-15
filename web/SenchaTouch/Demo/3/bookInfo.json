@@ -1,0 +1,17 @@
+{  
+    "success":true,  
+    "books":[  
+        {  
+            "id":"1",  
+            "image_url":"resources/images/english.jpg",  
+            "book_name":"考研英语",  
+            "author":"孙悟空",  
+            "description":"内容系统而全面，英语学习的好帮手！内容系统而全面，英语学习的好帮手！内容系统而全面，英语学习的好帮手！内容系统而全面，英语学习的好帮手！"  
+        },{  
+            "id":"2",  
+            "image_url":"resources/images/math.jpg",  
+            "book_name":"考研数学",  
+            "author":"刘诗诗",  
+            "description":"内容系统而全面，数学学习的好帮手，内容系统而全面，数学学习的好帮手内容系统而全面，数学学习的好帮手内容系统而全面，数学学习的好帮手"  
+        }]  
+}  

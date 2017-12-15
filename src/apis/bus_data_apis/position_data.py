@@ -28,6 +28,24 @@ from base.log import g_log
       name
       nickname
 '''
+genre_dict = [
+    {
+        "id":"1",
+        "genre":"喜剧"
+    },
+    {
+        "id":"2",
+        "genre":"文艺"
+    },   
+    {
+        "id":"3",
+        "genre":"动作"
+    },   
+    {
+        "id":"4",
+        "genre":"爱情"
+    },      
+]
 
 class BasePostClass(MethodView):
     @staticmethod
@@ -52,4 +70,4 @@ class BaseGetClass(MethodView):
         ol_log_info = {"user_id":"111", "service":"user_get_info"}
 
         #返回给request_route_handler的get方法
-        return True, ol_log_info, ret_func(const.RET_SUCCESS, '', 'get')
+        return True, {}, ret_func(const.RET_SUCCESS, '', genre_dict)
