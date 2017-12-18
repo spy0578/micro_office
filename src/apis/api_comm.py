@@ -5,6 +5,7 @@ import hashlib
 import datetime
 from db.redis_init import GlobalRedisAccess, g_rds_access
 from db.dbinit import DBSession
+from db.dborm.dborm import TblOlLogInfo
 from base.log import g_log
 import json
 from sqlalchemy.exc import SQLAlchemyError
@@ -18,6 +19,7 @@ import os
 import time
 from itsdangerous import TimedJSONWebSignatureSerializer as Serializer
 from itsdangerous import SignatureExpired,BadSignature
+import importlib
 
 
 
@@ -28,68 +30,76 @@ from itsdangerous import SignatureExpired,BadSignature
 import math
 import hashlib
 
+def base_request_route_handler(route_root, route_name, class_func_name):
+    print route_root
+    print route_name
 
+    module_name = 'apis.'+route_root+'.'+route_name
 
-'''
-为app提供的服务api函数返回函数
+    '''
+     <todo>判断模块是否存在
+     如果不存在直接返回系统错误
+    '''
+    #动态加载
+    module = importlib.import_module(module_name)    
 
-log_data: 登记流水表所需数据，AppActLog对象
-'''
-def ret_func_for_app(code, description, ret_data, log_data):
-    db_session = g.db_session
-
-    if code is not const.RET_SUCCESS:
-        db_session.rollback()
-
-
-    print log_data
-    print 'description:[%s]' % description
-
-
-    if log_data :
+    '''
+     <todo> 根据模块名module可以增加一些处理
+    '''
     
-        '''
-         登记AppActLog 用户行为流水表
-        '''
+    g.db_session = DBSession()
 
-        t_user_id = 0
-        t_service = ' '
-        t_charger_id = ' '
+    log = g_log.get_sys_log()
 
-        if log_data.has_key('user_id') :
-            t_user_id = int(log_data['user_id'])
-        if log_data.has_key('service') :
-            if log_data['service'] != '' :
-                t_service = log_data['service']
-        if log_data.has_key('charger_id') :
-            if log_data['charger_id'] != '' :
-                t_charger_id = log_data['charger_id']
+    #使用静态调用
+    ret_flag, ol_log_info, module_ret = eval(class_func_name)()
 
-        t_code = ' '
-        t_remark = ' '
+    if ret_flag is True:
+        g.db_session.commit()
+    else :
+        g.db_session.rollback()
 
-        if code != '':
-            t_code = code
-
-        if description != '':
-            t_remark = description
-
-            
-        now = datetime.datetime.now()
-        app_act_log = TblAppActLog(user_id = t_user_id,
-                                   service = t_service,
-                                   charger_id = t_charger_id,
-                                   ret_code  = t_code,
-                                   remark     = t_remark,
-                                   last_upd_dttm   = now,
-                                   record_stat   = const.RECORD_AVA)
-
-        db_session.add(app_act_log)
-        db_session.flush() 
-        db_session.commit()
+    #如果不为空，则登记流水表
+    if ol_log_info:
+        log.info("ol_log_info:%s", ol_log_info)
 
 
-    return ret_func(code, description, ret_data)
+        user_id        = ol_log_info['user_id'] \
+                        if ol_log_info.has_key('user_id') else '0'
+        service        = ol_log_info['service'] \
+                        if ol_log_info.has_key('service') else ' '
+
+        json_dict = json.loads(module_ret)
+        print json_dict['header']['code']
+        ret_code       = json_dict['header']['code']
+        remark         = json_dict['header']['description']
+        last_upd_dttm  = datetime.datetime.now()
+        record_stat    = '1'
+
+        user_id = int(user_id)
+        print ol_log_info
+
+        tbl_ol_log_info = TblOlLogInfo(user_id = user_id,
+                               service = service,
+                               ret_code  = ret_code,
+                               remark     = remark,
+                               last_upd_dttm   = last_upd_dttm,
+                               record_stat   = const.RECORD_AVA)
+
+        g.db_session.add(tbl_ol_log_info)
+        g.db_session.flush() 
+        g.db_session.commit()
+        
+
+    if g.db_session != None:
+        g.db_session.close()
+
+    return module_ret
+
+
+
+
+
 
 
 def ifGetHtml():

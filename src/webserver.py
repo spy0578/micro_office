@@ -39,7 +39,7 @@ if __name__ == '__main__':
     '''
     set use_reloader=False avoid starting monitor thread
     '''
-    app.run(host='127.0.0.1', port=9999, debug=False, use_reloader=True, threaded=False)
+    app.run(host=configs[config_type].SERVER_IP, port=8002, debug=False, use_reloader=True, threaded=False)
     #app.run(host='0.0.0.0', port=9999, debug=True, use_reloader=False)
 
 

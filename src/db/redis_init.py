@@ -22,7 +22,7 @@ class GlobalRedisAccess(Singleton):
         self.plat_rds = redis.Redis(host=configs[config_type].REDIS_URI, port=int(configs[config_type].REDIS_PORT), 
                                        db=int(configs[config_type].PLAT_REDIS_NUM))
         self.init_plat_rds()
-
+        
     def get_session_rds(self):
         return self.session_rds
 

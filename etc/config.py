@@ -52,6 +52,9 @@ class DevelopmentConfig(Config):
 
         STATIC_TEMPLATE_FOLDER = os.environ.get('STATIC_TEMPLATE_FOLDER') or \
                                'E:\work_project\micro_office\web'
+
+        SERVER_IP = os.environ.get('SERVER_IP') or \
+                    '168.40.5.23'
         
     else:
         print ("others")
@@ -60,6 +63,8 @@ class DevelopmentConfig(Config):
 
         STATIC_TEMPLATE_FOLDER = os.environ.get('STATIC_TEMPLATE_FOLDER') or \
                                          '/Users/spy0578/lab/micro_office/web'
+        SERVER_IP = os.environ.get('SERVER_IP') or \
+                    '168.40.5.23'
 
     WEB_SERVER_LOG_FILE_DIR_POST  = os.environ.get('WEB_SERVER_LOG_FILE_DIR_POST') or \
                                      'web_txn'
