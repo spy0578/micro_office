@@ -40,8 +40,9 @@ class TblUserBasicInfo(Base):
 
     user_id       = Column(Integer, primary_key=True)
     phone_no      = Column(String(13), nullable=False)
-    notesid       = Column(String(10), nullable=False)
-    user_stat     = Column(Integer, nullable=False)
+    notes_user_id = Column(String(20), nullable=False)
+    notes_id      = Column(String(10), nullable=False)
+    user_stat     = Column(String(1), nullable=False)
     crt_dttm      = Column(DateTime, nullable=False)
     last_upd_dttm = Column(DateTime, nullable=False)    
     record_stat   = Column(String(1), nullable=False)
