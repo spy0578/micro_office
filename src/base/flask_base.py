@@ -7,7 +7,7 @@ import traceback
 from log import g_log
 from apis.request_route_handler import *
 from apis.static_request_route_handler import *
-from apis.public_verify_request_route_handler import *
+from apis.public_plat_request_route_handler import *
 
 def flask_init(app):
     log=g_log.get_sys_log()
@@ -23,9 +23,9 @@ def flask_init(app):
     app.add_url_rule('/apis/request_route_handler/<route_root>/<route_name>'
                              , view_func=request_route_handler_view, methods=['GET', 'POST', 'PUT'])
 
-    public_verify_request_route_handler_view = PublicVerifyRequestRouteHandler.as_view('public_verify_request_route_handler')
+    public_plat_request_route_handler_view = PublicPlatRequestRouteHandler.as_view('public_plat_request_route_handler')
     app.add_url_rule('/'
-                             , view_func=public_verify_request_route_handler_view, methods=['GET', 'POST'])
+                             , view_func=public_plat_request_route_handler_view, methods=['GET', 'POST'])
 
     static_request_route_handler_view = StaticRequestRouteHandler.as_view('static_request_route_handler')
     app.add_url_rule('/<path:filename>'

@@ -11,15 +11,24 @@ metadata = Base.metadata
 class TblParaStatInfo(Base):
     __tablename__ = 'tbl_para_stat_info'
 
-    para_id         = Column(Integer, primary_key=True)
-    para_type_id    = Column(Integer, nullable=False)
-    para_id_name    = Column(String(20), nullable=False)
-    para_type_name  = Column(String(20), nullable=False)
-    figure          = Column(Numeric(8, 2), nullable=False)
-    figure_dttm     = Column(DateTime, nullable=False)
+    para_stat_id    = Column(Integer, primary_key=True)        
+    para_type_id    = Column(Integer, nullable=False)             #参数类型id 
+    figure          = Column(Numeric(8, 2), nullable=False)       #数值
+    figure_date     = Column(Date, nullable=False)                #数据产生日期
+    figure_time     = Column(Integer, nullable=False)             #数据产生时间
     remark          = Column(String(60), nullable=False)
+    last_upd_dttm   = Column(DateTime, nullable=False)
     record_stat     = Column(String(1), nullable=False)
 
+
+class TblParaTypeInfo(Base):
+    __tablename__ = 'tbl_para_type_info'
+
+    para_type_id    = Column(Integer, primary_key=True)          
+    para_type_name  = Column(String(60), nullable=False)          #总存款、总个人存款等
+    remark          = Column(String(60), nullable=False)
+    last_upd_dttm   = Column(DateTime, nullable=False)
+    record_stat     = Column(String(1), nullable=False)
 
 
 
@@ -33,6 +42,21 @@ class TblOlLogInfo(Base):
     remark        = Column(String(60), nullable=False)
     last_upd_dttm = Column(DateTime, nullable=False)
     record_stat   = Column(String(1), nullable=False)
+
+      
+'''
+   菜单事件权限管理，根据用户组id配置菜单权限
+'''
+class TblEventKeyAuth(Base):
+    __tablename__ = 'tbl_event_key_auth'
+
+    auth_id       = Column(Integer, primary_key=True)
+    group_id      = Column(Integer, nullable=False)
+    event_key     = Column(String(10), nullable=False)    #菜单事件编号
+    remark        = Column(String(60), nullable=False)
+    last_upd_dttm = Column(DateTime, nullable=False)
+    record_stat   = Column(String(1), nullable=False)
+
 
 
 class TblUserBasicInfo(Base):

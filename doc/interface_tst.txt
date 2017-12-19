@@ -1,6 +1,13 @@
 GET POST 
 http://127.0.0.1:9999/apis/request_route_handler/user_apis/user_get_info
-
+http://168.40.5.23:8002/apis/request_route_handler/user_apis/user_get_info
 
 
 http://168.40.5.23:8002/?signature=304578ebcf18c6ff00989e94400b6d63a6b50bb9&timestamp=1513557865295&nonce=K2jARU&echostr=ffa9ff55-bcc3-4e86-9c64-36effe13ec7c
+
+
+定时任务：
+1. 获取头寸数据，并保存到表中
+2. 根据表数据绘图，绘制折现图（展示近几天的数据），并生成图片
+3. 将图片推送到云平台（调用接口https://ucp.cib.com.cn:9016/media/upload.action），得到图片id
+4. 根据数据生成文字信息或表格的html代码，配合图片id，推送给响应组用户

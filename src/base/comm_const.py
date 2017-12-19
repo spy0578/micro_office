@@ -7,20 +7,33 @@ import math
 const.RECORD_AVA   = '1'
 const.RECORD_UNAVA = '0'
 
-const.GET_ACCESS_TOKEN_URL = 'https://168.1.6.140:9016/auth/token.action?'
-const.MODIFY_USER_GROUP_URL = 'https://168.1.6.140:9016/group/modify.action?access_token='
+###########################微办公公众号#####################################################
 
-const.PUBLIC_PLAT_RET_ACCESS_TOKEN_ERROR   = '40001'
-const.PUBLIC_PLAT_RET_ACCESS_TOKEN_INVALID = '40014'
-const.PUBLIC_PLAT_RET_SUCCESS              = '0'
+const.GET_ACCESS_TOKEN_URL = 'https://168.1.6.140:9016/auth/token.action?'
+const.MODIFY_USER_GROUP_URL = 'https://168.1.6.140:9016/group/move.action?access_token='
+const.CREATE_MENU_URL       = 'https://168.1.6.140:9016/menu/new.action?access_token='
+const.QUERY_GROUP_URL       = 'https://168.1.6.140:9016/group/query.action?access_token='
+const.CREATE_MATERIAL_INFO_URL = 'https://168.1.6.140:9016/mass/material.action?access_token='
+const.PUSH_MATERIAL_INFO_URL = 'https://168.1.6.140:9016/mass/masspush.action?access_token='
+
+const.PUBLIC_PLAT_RET_ACCESS_TOKEN_ERROR   = 40001
+const.PUBLIC_PLAT_RET_ACCESS_TOKEN_INVALID = 40014
+const.PUBLIC_PLAT_RET_SUCCESS              = 0
 
 const.PUBLIC_PLAT_CLIENT_ID = '993811722a236be827420d1756d9e4f4'
 const.PUBLIC_PLAT_CLIENT_SECRET = 'f8f59feb07cf05874b152850937c19c1'
 
-const.IT_DEP_GROUP = '431'
-const.OTHER_DEP_GROUP = '432'
+const.PUBLIC_PLAT_MSG_TYPE_TEXT  = 'text'
+const.PUBLIC_PLAT_MSG_TYPE_EVENT = 'event'
+
+const.PUBLIC_PLAT_METERIAL_TYPE_NEWS = 'mpnews'
+
+const.IT_DEP_GROUP = 431
+const.OTHER_DEP_GROUP = 432
 
 const.REDIS_ACCESS_TOKEN = 'ACCESS_TOKEN'
+
+############################################################################################
 
 #message
 const.VER_CODE_UNCHECKED = '0'

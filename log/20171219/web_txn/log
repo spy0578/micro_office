@@ -1,0 +1,1136 @@
+MainThread 08:25:50 flask_base.py[line:15] INFO flask_init
+MainThread 08:28:17 flask_base.py[line:15] INFO flask_init
+MainThread 08:28:20 flask_base.py[line:15] INFO flask_init
+MainThread 08:53:57 flask_base.py[line:15] INFO flask_init
+MainThread 08:54:00 flask_base.py[line:15] INFO flask_init
+MainThread 08:54:27 flask_base.py[line:15] INFO flask_init
+MainThread 08:54:36 flask_base.py[line:15] INFO flask_init
+MainThread 08:54:39 flask_base.py[line:15] INFO flask_init
+Thread-1 08:58:22 flask_base.py[line:55] INFO 交易唯一戳[08582200002230]:类型[REQ]:时间[085822]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513645101996
+Nonce: 014612
+Content-Length: 168
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 2afd3588e87f4c8bd83f7463b5ffae7c943c6e0f
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513645101989,"MsgType":"text","Content":"MTM=\r\n","MsgId":"0ade3828-5ddf-34f1-9b0a-4eb9e8731ef7"}]
+Thread-1 08:58:22 api_comm.py[line:163] INFO <Response 119 bytes [200 OK]>
+Thread-1 08:58:22 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 08:58:22 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 119
+
+
+Thread-1 08:58:22 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "hi~\u8bf7\u8f93\u5165\u624b\u673a\u53f7\u6ce8\u518c~"}}
+Thread-1 08:58:22 flask_base.py[line:107] INFO 交易唯一戳[08582200002230]:类型[RSP]:时间[085822]:交易时长[0.04100s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 119
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "hi~\u8bf7\u8f93\u5165\u624b\u673a\u53f7\u6ce8\u518c~"}}]
+MainThread 08:58:36 flask_base.py[line:15] INFO flask_init
+Thread-1 08:58:40 flask_base.py[line:55] INFO 交易唯一戳[08584000002231]:类型[REQ]:时间[085840]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513645120415
+Nonce: 127725
+Content-Length: 168
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 121bd2d6baca85e7562dbb3274414b92fc4d9349
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513645120408,"MsgType":"text","Content":"Mg==\r\n","MsgId":"26426d35-1fb4-3fc5-9ed0-43b3e9284ce4"}]
+Thread-1 08:58:41 api_comm.py[line:163] INFO <Response 127 bytes [200 OK]>
+Thread-1 08:58:41 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 08:58:41 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 127
+
+
+Thread-1 08:58:41 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "\u6ce8\u518c\u5931\u8d25\uff0c\u8bf7\u518d\u6b21\u5c1d\u8bd5"}}
+Thread-1 08:58:41 flask_base.py[line:107] INFO 交易唯一戳[08584100002231]:类型[RSP]:时间[085841]:交易时长[0.62000s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 127
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "\u6ce8\u518c\u5931\u8d25\uff0c\u8bf7\u518d\u6b21\u5c1d\u8bd5"}}]
+MainThread 09:00:47 flask_base.py[line:15] INFO flask_init
+Thread-1 09:00:52 flask_base.py[line:55] INFO 交易唯一戳[09005200002232]:类型[REQ]:时间[090052]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513645252802
+Nonce: 176927
+Content-Length: 168
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: bfbff8ead56c9b6904423020b7ee59040c795d52
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513645252795,"MsgType":"text","Content":"Nw==\r\n","MsgId":"aa4ffe55-23d8-3b23-aa1c-3ced05b29787"}]
+Thread-1 09:00:53 api_comm.py[line:163] INFO <Response 127 bytes [200 OK]>
+Thread-1 09:00:53 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 09:00:53 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 127
+
+
+Thread-1 09:00:53 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "\u6ce8\u518c\u5931\u8d25\uff0c\u8bf7\u518d\u6b21\u5c1d\u8bd5"}}
+Thread-1 09:00:53 flask_base.py[line:107] INFO 交易唯一戳[09005300002232]:类型[RSP]:时间[090053]:交易时长[0.60800s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 127
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "\u6ce8\u518c\u5931\u8d25\uff0c\u8bf7\u518d\u6b21\u5c1d\u8bd5"}}]
+MainThread 09:01:17 flask_base.py[line:15] INFO flask_init
+Thread-1 09:01:20 flask_base.py[line:55] INFO 交易唯一戳[09012000002233]:类型[REQ]:时间[090120]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513645280770
+Nonce: 279556
+Content-Length: 168
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: fe6b602b83e0fdbd5c013d4cfb9e65be40011d56
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513645280763,"MsgType":"text","Content":"Nw==\r\n","MsgId":"941e96a3-31b1-32c1-aa05-2e61f656932f"}]
+Thread-1 09:01:22 flask_base.py[line:156] ERROR 500发生异常
+Thread-1 09:01:22 api_comm.py[line:163] INFO <Response 75 bytes [200 OK]>
+Thread-1 09:01:22 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 09:01:22 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+
+Thread-1 09:01:22 api_comm.py[line:168] INFO {"header": {"message": "", "code": "20001", "description": ""}, "data": {}}
+Thread-1 09:01:22 flask_base.py[line:107] INFO 交易唯一戳[09012200002233]:类型[RSP]:时间[090122]:交易时长[1.22300s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 09:01:22 flask_base.py[line:135] ERROR Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "E:\work_project\micro_office\src\apis\public_verify_request_route_handler.py", line 39, in post
+    return self.base('public_verify_apis', 'public_verify', 'module.BasePostClass.post')
+  File "E:\work_project\micro_office\src\apis\public_verify_request_route_handler.py", line 33, in base
+    return base_request_route_handler(route_root, route_name, class_func_name)
+  File "E:\work_project\micro_office\src\apis\api_comm.py", line 55, in base_request_route_handler
+    ret_flag, ol_log_info, module_ret = eval(class_func_name)()
+  File "E:\work_project\micro_office\src\apis\public_verify_apis\public_verify.py", line 63, in post
+    if modify_user_group(from_user_name, const.OTHER_DEP_GROUP) is False:
+  File "E:\work_project\micro_office\src\apis\public_verify_apis\public_verify_api_comm.py", line 67, in modify_user_group
+    modify_user_group(user_lst, group_id)
+NameError: global name 'user_lst' is not defined
+
+MainThread 09:01:52 flask_base.py[line:15] INFO flask_init
+Thread-1 09:01:55 flask_base.py[line:55] INFO 交易唯一戳[09015500002234]:类型[REQ]:时间[090155]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513645312262
+Nonce: 781601
+Content-Length: 168
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 016fb00c84953ca93b57e7492ba0bd69677f651b
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513645312255,"MsgType":"text","Content":"OA==\r\n","MsgId":"a1370da4-44fa-344a-bf3a-9b41535ded00"}]
+Thread-1 09:01:56 api_comm.py[line:163] INFO <Response 127 bytes [200 OK]>
+Thread-1 09:01:56 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 09:01:56 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 127
+
+
+Thread-1 09:01:56 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "\u6ce8\u518c\u5931\u8d25\uff0c\u8bf7\u518d\u6b21\u5c1d\u8bd5"}}
+Thread-1 09:01:56 flask_base.py[line:107] INFO 交易唯一戳[09015600002234]:类型[RSP]:时间[090156]:交易时长[0.63300s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 127
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "\u6ce8\u518c\u5931\u8d25\uff0c\u8bf7\u518d\u6b21\u5c1d\u8bd5"}}]
+MainThread 09:36:48 flask_base.py[line:15] INFO flask_init
+MainThread 09:37:04 flask_base.py[line:15] INFO flask_init
+Thread-1 09:37:53 flask_base.py[line:55] INFO 交易唯一戳[09375300002235]:类型[REQ]:时间[093753]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513647473543
+Nonce: 423073
+Content-Length: 168
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: ac124788075e33abd01d9604145aed69fa948759
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513647473535,"MsgType":"text","Content":"OQ==\r\n","MsgId":"a7f4d774-a1b7-3886-8318-3231c9ced581"}]
+Thread-1 09:37:54 api_comm.py[line:163] INFO <Response 127 bytes [200 OK]>
+Thread-1 09:37:54 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 09:37:54 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 127
+
+
+Thread-1 09:37:54 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "\u6ce8\u518c\u5931\u8d25\uff0c\u8bf7\u518d\u6b21\u5c1d\u8bd5"}}
+Thread-1 09:37:54 flask_base.py[line:107] INFO 交易唯一戳[09375400002235]:类型[RSP]:时间[093754]:交易时长[0.62500s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 127
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "\u6ce8\u518c\u5931\u8d25\uff0c\u8bf7\u518d\u6b21\u5c1d\u8bd5"}}]
+MainThread 09:40:23 flask_base.py[line:15] INFO flask_init
+MainThread 09:41:10 flask_base.py[line:15] INFO flask_init
+MainThread 09:42:09 flask_base.py[line:15] INFO flask_init
+MainThread 09:42:22 flask_base.py[line:15] INFO flask_init
+MainThread 09:42:25 flask_base.py[line:15] INFO flask_init
+MainThread 09:42:30 flask_base.py[line:15] INFO flask_init
+MainThread 09:44:18 flask_base.py[line:15] INFO flask_init
+MainThread 09:44:46 flask_base.py[line:15] INFO flask_init
+Thread-1 09:47:15 flask_base.py[line:55] INFO 交易唯一戳[09471500002236]:类型[REQ]:时间[094715]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513648035026
+Nonce: 650469
+Content-Length: 168
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: e34f0f4516fe98ea183dcd33ec401c1e14c442c4
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513648035015,"MsgType":"text","Content":"aA==\r\n","MsgId":"e7b77706-040b-34bc-828b-58f655bb356d"}]
+Thread-1 09:47:15 api_comm.py[line:163] INFO <Response 119 bytes [200 OK]>
+Thread-1 09:47:15 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 09:47:15 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 119
+
+
+Thread-1 09:47:15 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "hi~\u8bf7\u8f93\u5165\u624b\u673a\u53f7\u6ce8\u518c~"}}
+Thread-1 09:47:15 flask_base.py[line:107] INFO 交易唯一戳[09471500002236]:类型[RSP]:时间[094715]:交易时长[0.03700s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 119
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "hi~\u8bf7\u8f93\u5165\u624b\u673a\u53f7\u6ce8\u518c~"}}]
+MainThread 09:49:07 flask_base.py[line:15] INFO flask_init
+MainThread 09:50:36 flask_base.py[line:15] INFO flask_init
+MainThread 09:50:41 flask_base.py[line:15] INFO flask_init
+MainThread 09:51:23 flask_base.py[line:15] INFO flask_init
+MainThread 09:56:07 flask_base.py[line:15] INFO flask_init
+MainThread 09:56:10 flask_base.py[line:15] INFO flask_init
+MainThread 09:56:41 flask_base.py[line:15] INFO flask_init
+MainThread 09:58:53 flask_base.py[line:15] INFO flask_init
+MainThread 09:59:01 flask_base.py[line:15] INFO flask_init
+Thread-1 09:59:15 flask_base.py[line:55] INFO 交易唯一戳[09591500002237]:类型[REQ]:时间[095915]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513648755509
+Nonce: 208583
+Content-Length: 168
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 26a7bda3f9adc9c599cc48401a0004d020a13fe4
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513648755502,"MsgType":"text","Content":"ODE=\r\n","MsgId":"ca082d9e-4ed3-3ae9-91b8-e20da0e63d5c"}]
+Thread-1 09:59:17 api_comm.py[line:163] INFO <Response 109 bytes [200 OK]>
+Thread-1 09:59:17 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 09:59:17 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 109
+
+
+Thread-1 09:59:17 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "\u624b\u673a\u53f7\u6ce8\u518c\u6210\u529f"}}
+Thread-1 09:59:17 flask_base.py[line:107] INFO 交易唯一戳[09591700002237]:类型[RSP]:时间[095917]:交易时长[1.65000s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 109
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "\u624b\u673a\u53f7\u6ce8\u518c\u6210\u529f"}}]
+MainThread 10:02:28 flask_base.py[line:15] INFO flask_init
+MainThread 10:02:38 flask_base.py[line:15] INFO flask_init
+MainThread 10:12:01 flask_base.py[line:15] INFO flask_init
+MainThread 10:12:02 flask_base.py[line:15] INFO flask_init
+Thread-1 10:12:17 flask_base.py[line:55] INFO 交易唯一戳[10121700002238]:类型[REQ]:时间[101217]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513649537010
+Nonce: 160289
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 8455303b3cc831412daabd03a84edb45d6d37945
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513649537003,"MsgType":"event","Event":"CLICK","EventKey":"5001"}]
+Thread-1 10:12:17 flask_base.py[line:156] ERROR 500发生异常
+Thread-1 10:12:17 api_comm.py[line:163] INFO <Response 75 bytes [200 OK]>
+Thread-1 10:12:17 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 10:12:17 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+
+Thread-1 10:12:17 api_comm.py[line:168] INFO {"header": {"message": "", "code": "20001", "description": ""}, "data": {}}
+Thread-1 10:12:17 flask_base.py[line:107] INFO 交易唯一戳[10121700002238]:类型[RSP]:时间[101217]:交易时长[0.03100s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 10:12:17 flask_base.py[line:135] ERROR Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "E:\work_project\micro_office\src\apis\public_verify_request_route_handler.py", line 39, in post
+    return self.base('public_verify_apis', 'public_verify', 'module.BasePostClass.post')
+  File "E:\work_project\micro_office\src\apis\public_verify_request_route_handler.py", line 33, in base
+    return base_request_route_handler(route_root, route_name, class_func_name)
+  File "E:\work_project\micro_office\src\apis\api_comm.py", line 55, in base_request_route_handler
+    ret_flag, ol_log_info, module_ret = eval(class_func_name)()
+  File "E:\work_project\micro_office\src\apis\public_verify_apis\public_verify.py", line 34, in post
+    content = param_dict['Content']
+KeyError: 'Content'
+
+Thread-1 10:13:16 flask_base.py[line:55] INFO 交易唯一戳[10131600002239]:类型[REQ]:时间[101316]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513649596425
+Nonce: 327523
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 40488625d3ac83d756cb98c39bb6b2fff3de40de
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513649596418,"MsgType":"event","Event":"CLICK","EventKey":"null"}]
+Thread-1 10:13:16 flask_base.py[line:156] ERROR 500发生异常
+Thread-1 10:13:16 api_comm.py[line:163] INFO <Response 75 bytes [200 OK]>
+Thread-1 10:13:16 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 10:13:16 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+
+Thread-1 10:13:16 api_comm.py[line:168] INFO {"header": {"message": "", "code": "20001", "description": ""}, "data": {}}
+Thread-1 10:13:16 flask_base.py[line:107] INFO 交易唯一戳[10131600002239]:类型[RSP]:时间[101316]:交易时长[0.07600s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 10:13:16 flask_base.py[line:135] ERROR Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "E:\work_project\micro_office\src\apis\public_verify_request_route_handler.py", line 39, in post
+    return self.base('public_verify_apis', 'public_verify', 'module.BasePostClass.post')
+  File "E:\work_project\micro_office\src\apis\public_verify_request_route_handler.py", line 33, in base
+    return base_request_route_handler(route_root, route_name, class_func_name)
+  File "E:\work_project\micro_office\src\apis\api_comm.py", line 55, in base_request_route_handler
+    ret_flag, ol_log_info, module_ret = eval(class_func_name)()
+  File "E:\work_project\micro_office\src\apis\public_verify_apis\public_verify.py", line 34, in post
+    content = param_dict['Content']
+KeyError: 'Content'
+
+Thread-1 10:13:19 flask_base.py[line:55] INFO 交易唯一戳[10131900002240]:类型[REQ]:时间[101319]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513649599016
+Nonce: 407427
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: ab4bc836e8f12a4d4abc31e60f22c4d78b1f6245
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513649599010,"MsgType":"event","Event":"CLICK","EventKey":"null"}]
+Thread-1 10:13:19 flask_base.py[line:156] ERROR 500发生异常
+Thread-1 10:13:19 api_comm.py[line:163] INFO <Response 75 bytes [200 OK]>
+Thread-1 10:13:19 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 10:13:19 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+
+Thread-1 10:13:19 api_comm.py[line:168] INFO {"header": {"message": "", "code": "20001", "description": ""}, "data": {}}
+Thread-1 10:13:19 flask_base.py[line:107] INFO 交易唯一戳[10131900002240]:类型[RSP]:时间[101319]:交易时长[0.07500s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 10:13:19 flask_base.py[line:135] ERROR Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "E:\work_project\micro_office\src\apis\public_verify_request_route_handler.py", line 39, in post
+    return self.base('public_verify_apis', 'public_verify', 'module.BasePostClass.post')
+  File "E:\work_project\micro_office\src\apis\public_verify_request_route_handler.py", line 33, in base
+    return base_request_route_handler(route_root, route_name, class_func_name)
+  File "E:\work_project\micro_office\src\apis\api_comm.py", line 55, in base_request_route_handler
+    ret_flag, ol_log_info, module_ret = eval(class_func_name)()
+  File "E:\work_project\micro_office\src\apis\public_verify_apis\public_verify.py", line 34, in post
+    content = param_dict['Content']
+KeyError: 'Content'
+
+Thread-1 10:13:23 flask_base.py[line:55] INFO 交易唯一戳[10132300002241]:类型[REQ]:时间[101323]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513649603335
+Nonce: 186117
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: d231c670a441a9780a12985621e1ff555abd5406
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513649603329,"MsgType":"event","Event":"CLICK","EventKey":"null"}]
+Thread-1 10:13:23 flask_base.py[line:156] ERROR 500发生异常
+Thread-1 10:13:23 api_comm.py[line:163] INFO <Response 75 bytes [200 OK]>
+Thread-1 10:13:23 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 10:13:23 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+
+Thread-1 10:13:23 api_comm.py[line:168] INFO {"header": {"message": "", "code": "20001", "description": ""}, "data": {}}
+Thread-1 10:13:23 flask_base.py[line:107] INFO 交易唯一戳[10132300002241]:类型[RSP]:时间[101323]:交易时长[0.08500s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 10:13:23 flask_base.py[line:135] ERROR Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "E:\work_project\micro_office\src\apis\public_verify_request_route_handler.py", line 39, in post
+    return self.base('public_verify_apis', 'public_verify', 'module.BasePostClass.post')
+  File "E:\work_project\micro_office\src\apis\public_verify_request_route_handler.py", line 33, in base
+    return base_request_route_handler(route_root, route_name, class_func_name)
+  File "E:\work_project\micro_office\src\apis\api_comm.py", line 55, in base_request_route_handler
+    ret_flag, ol_log_info, module_ret = eval(class_func_name)()
+  File "E:\work_project\micro_office\src\apis\public_verify_apis\public_verify.py", line 34, in post
+    content = param_dict['Content']
+KeyError: 'Content'
+
+Thread-1 10:13:36 flask_base.py[line:55] INFO 交易唯一戳[10133600002242]:类型[REQ]:时间[101336]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513649616631
+Nonce: 402650
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 53654f7d0154c3933b8a6c142eea7507ba3c0629
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513649616624,"MsgType":"event","Event":"CLICK","EventKey":"5002"}]
+Thread-1 10:13:37 flask_base.py[line:156] ERROR 500发生异常
+Thread-1 10:13:37 api_comm.py[line:163] INFO <Response 75 bytes [200 OK]>
+Thread-1 10:13:37 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 10:13:37 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+
+Thread-1 10:13:37 api_comm.py[line:168] INFO {"header": {"message": "", "code": "20001", "description": ""}, "data": {}}
+Thread-1 10:13:37 flask_base.py[line:107] INFO 交易唯一戳[10133700002242]:类型[RSP]:时间[101337]:交易时长[0.09500s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 10:13:37 flask_base.py[line:135] ERROR Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "E:\work_project\micro_office\src\apis\public_verify_request_route_handler.py", line 39, in post
+    return self.base('public_verify_apis', 'public_verify', 'module.BasePostClass.post')
+  File "E:\work_project\micro_office\src\apis\public_verify_request_route_handler.py", line 33, in base
+    return base_request_route_handler(route_root, route_name, class_func_name)
+  File "E:\work_project\micro_office\src\apis\api_comm.py", line 55, in base_request_route_handler
+    ret_flag, ol_log_info, module_ret = eval(class_func_name)()
+  File "E:\work_project\micro_office\src\apis\public_verify_apis\public_verify.py", line 34, in post
+    content = param_dict['Content']
+KeyError: 'Content'
+
+MainThread 10:14:01 flask_base.py[line:15] INFO flask_init
+MainThread 10:16:34 flask_base.py[line:15] INFO flask_init
+MainThread 10:17:56 flask_base.py[line:15] INFO flask_init
+Thread-1 10:20:30 flask_base.py[line:55] INFO 交易唯一戳[10203000002243]:类型[REQ]:时间[102030]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513650030355
+Nonce: 933105
+Content-Length: 168
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: a1ee690903126892d4ae404488498478db263e01
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513650030346,"MsgType":"text","Content":"a2w=\r\n","MsgId":"37f1e16b-f110-35a4-b6cf-6885b9c93921"}]
+Thread-1 10:20:30 api_comm.py[line:163] INFO <Response 119 bytes [200 OK]>
+Thread-1 10:20:30 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 10:20:30 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 119
+
+
+Thread-1 10:20:30 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "hi~\u8bf7\u8f93\u5165\u624b\u673a\u53f7\u6ce8\u518c~"}}
+Thread-1 10:20:30 flask_base.py[line:107] INFO 交易唯一戳[10203000002243]:类型[RSP]:时间[102030]:交易时长[0.00900s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 119
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "hi~\u8bf7\u8f93\u5165\u624b\u673a\u53f7\u6ce8\u518c~"}}]
+MainThread 10:21:32 flask_base.py[line:15] INFO flask_init
+MainThread 10:22:34 flask_base.py[line:15] INFO flask_init
+MainThread 10:28:43 flask_base.py[line:15] INFO flask_init
+MainThread 10:28:50 flask_base.py[line:15] INFO flask_init
+MainThread 10:29:40 flask_base.py[line:15] INFO flask_init
+MainThread 10:29:52 flask_base.py[line:15] INFO flask_init
+MainThread 10:29:55 flask_base.py[line:15] INFO flask_init
+MainThread 10:30:50 flask_base.py[line:15] INFO flask_init
+MainThread 10:31:28 flask_base.py[line:15] INFO flask_init
+MainThread 10:31:41 flask_base.py[line:15] INFO flask_init
+MainThread 10:36:32 flask_base.py[line:15] INFO flask_init
+MainThread 11:08:26 flask_base.py[line:15] INFO flask_init
+MainThread 11:08:27 flask_base.py[line:15] INFO flask_init
+Thread-1 11:08:31 flask_base.py[line:55] INFO 交易唯一戳[11083100002244]:类型[REQ]:时间[110831]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513652910915
+Nonce: 030026
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 4f1cc25bec374553a687fe2e0dc34e7b93a475e4
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513652910908,"MsgType":"event","Event":"CLICK","EventKey":"5001"}]
+Thread-1 11:08:33 flask_base.py[line:156] ERROR 500发生异常
+Thread-1 11:08:33 api_comm.py[line:163] INFO <Response 75 bytes [200 OK]>
+Thread-1 11:08:33 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 11:08:33 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+
+Thread-1 11:08:33 api_comm.py[line:168] INFO {"header": {"message": "", "code": "20001", "description": ""}, "data": {}}
+Thread-1 11:08:33 flask_base.py[line:107] INFO 交易唯一戳[11083300002244]:类型[RSP]:时间[110833]:交易时长[1.80400s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 11:08:33 flask_base.py[line:135] ERROR Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "E:\work_project\micro_office\src\apis\public_verify_request_route_handler.py", line 39, in post
+    return self.base('public_verify_apis', 'public_verify', 'module.BasePostClass.post')
+  File "E:\work_project\micro_office\src\apis\public_verify_request_route_handler.py", line 33, in base
+    return base_request_route_handler(route_root, route_name, class_func_name)
+  File "E:\work_project\micro_office\src\apis\api_comm.py", line 55, in base_request_route_handler
+    ret_flag, ol_log_info, module_ret = eval(class_func_name)()
+TypeError: 'NoneType' object is not iterable
+
+MainThread 11:08:59 flask_base.py[line:15] INFO flask_init
+Thread-1 11:09:08 flask_base.py[line:55] INFO 交易唯一戳[11090800002245]:类型[REQ]:时间[110908]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513652948185
+Nonce: 051837
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: c509c92694f64fd5568b58c02c47ec163590fe6d
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513652948179,"MsgType":"event","Event":"CLICK","EventKey":"5001"}]
+Thread-1 11:09:10 api_comm.py[line:163] INFO <Response 76 bytes [200 OK]>
+Thread-1 11:09:10 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 11:09:10 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 76
+
+
+Thread-1 11:09:10 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "event_key"}}
+Thread-1 11:09:10 flask_base.py[line:107] INFO 交易唯一戳[11091000002245]:类型[RSP]:时间[110910]:交易时长[1.61400s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 76
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "event_key"}}]
+Thread-1 11:09:10 flask_base.py[line:55] INFO 交易唯一戳[11091000002246]:类型[REQ]:时间[110910]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513652949638
+Nonce: 296442
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 818de6a103a6890c6394c550bae72f70a33cb13c
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513652949630,"MsgType":"event","Event":"CLICK","EventKey":"5001"}]
+Thread-1 11:09:10 api_comm.py[line:163] INFO <Response 76 bytes [200 OK]>
+Thread-1 11:09:10 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 11:09:10 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 76
+
+
+Thread-1 11:09:10 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "event_key"}}
+Thread-1 11:09:10 flask_base.py[line:107] INFO 交易唯一戳[11091000002246]:类型[RSP]:时间[110910]:交易时长[0.40400s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 76
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "event_key"}}]
+Thread-1 11:09:14 flask_base.py[line:55] INFO 交易唯一戳[11091400002247]:类型[REQ]:时间[110914]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513652954078
+Nonce: 148628
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: bd497433d980259d64f0ff2829e7f9efc1db667f
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513652954071,"MsgType":"event","Event":"CLICK","EventKey":"5001"}]
+Thread-1 11:09:15 api_comm.py[line:163] INFO <Response 76 bytes [200 OK]>
+Thread-1 11:09:15 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 11:09:15 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 76
+
+
+Thread-1 11:09:15 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "event_key"}}
+Thread-1 11:09:15 flask_base.py[line:107] INFO 交易唯一戳[11091500002247]:类型[RSP]:时间[110915]:交易时长[0.61500s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 76
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "event_key"}}]
+MainThread 12:18:30 flask_base.py[line:15] INFO flask_init
+MainThread 12:18:31 flask_base.py[line:15] INFO flask_init
+MainThread 14:31:45 flask_base.py[line:15] INFO flask_init
+MainThread 14:31:46 flask_base.py[line:15] INFO flask_init
+Thread-1 14:33:36 flask_base.py[line:55] INFO 交易唯一戳[14333600002248]:类型[REQ]:时间[143336]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513665215513
+Nonce: 437386
+Content-Length: 168
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 91265391d48c37d043a73a0eb63f5a84feacd51d
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513665215503,"MsgType":"text","Content":"aGk=\r\n","MsgId":"a1203a8a-c64a-3887-bad4-4fc529bcd43d"}]
+Thread-1 14:33:36 flask_base.py[line:156] ERROR 500发生异常
+Thread-1 14:33:36 api_comm.py[line:163] INFO <Response 75 bytes [200 OK]>
+Thread-1 14:33:36 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 14:33:36 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+
+Thread-1 14:33:36 api_comm.py[line:168] INFO {"header": {"message": "", "code": "20001", "description": ""}, "data": {}}
+Thread-1 14:33:36 flask_base.py[line:107] INFO 交易唯一戳[14333600002248]:类型[RSP]:时间[143336]:交易时长[0.05700s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 14:33:36 flask_base.py[line:135] ERROR Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "E:\work_project\micro_office\src\apis\public_plat_request_route_handler.py", line 41, in post
+    init_access_token()
+NameError: global name 'init_access_token' is not defined
+
+MainThread 14:33:54 flask_base.py[line:15] INFO flask_init
+Thread-1 14:33:57 flask_base.py[line:55] INFO 交易唯一戳[14335700002249]:类型[REQ]:时间[143357]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513665236571
+Nonce: 138442
+Content-Length: 168
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: e5ab3d4369f3a89a01ccc1f30ac12bd8690a50eb
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513665236566,"MsgType":"text","Content":"aGk=\r\n","MsgId":"60b7e3c2-d011-30c2-8886-007cdbeb3024"}]
+Thread-1 14:33:57 flask_base.py[line:156] ERROR 500发生异常
+Thread-1 14:33:57 api_comm.py[line:163] INFO <Response 75 bytes [200 OK]>
+Thread-1 14:33:57 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 14:33:57 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+
+Thread-1 14:33:57 api_comm.py[line:168] INFO {"header": {"message": "", "code": "20001", "description": ""}, "data": {}}
+Thread-1 14:33:57 flask_base.py[line:107] INFO 交易唯一戳[14335700002249]:类型[RSP]:时间[143357]:交易时长[0.06000s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 14:33:57 flask_base.py[line:135] ERROR Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "E:\work_project\micro_office\src\apis\public_plat_request_route_handler.py", line 41, in post
+    self.init_access_token()
+TypeError: init_access_token() takes no arguments (1 given)
+
+MainThread 14:34:10 flask_base.py[line:15] INFO flask_init
+Thread-1 14:34:11 flask_base.py[line:55] INFO 交易唯一戳[14341100002250]:类型[REQ]:时间[143411]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513665250897
+Nonce: 796837
+Content-Length: 168
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: b600f7cfb4364dd8d1b5ffa47e6da668bbb76073
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513665250890,"MsgType":"text","Content":"aA==\r\n","MsgId":"8f6ef456-661e-399b-9f1f-2ad4edf2a336"}]
+Thread-1 14:34:11 api_comm.py[line:163] INFO <Response 119 bytes [200 OK]>
+Thread-1 14:34:11 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 14:34:11 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 119
+
+
+Thread-1 14:34:11 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "hi~\u8bf7\u8f93\u5165\u624b\u673a\u53f7\u6ce8\u518c~"}}
+Thread-1 14:34:11 flask_base.py[line:107] INFO 交易唯一戳[14341100002250]:类型[RSP]:时间[143411]:交易时长[0.03800s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 119
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "hi~\u8bf7\u8f93\u5165\u624b\u673a\u53f7\u6ce8\u518c~"}}]
+Thread-1 14:34:18 flask_base.py[line:55] INFO 交易唯一戳[14341800002251]:类型[REQ]:时间[143418]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513665257679
+Nonce: 352621
+Content-Length: 168
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 5124f868e802bb42ce80fb44dec287a995ff3a8c
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513665257671,"MsgType":"text","Content":"MTI=\r\n","MsgId":"11710f36-fec1-3454-bc2b-97db029f7910"}]
+Thread-1 14:34:21 api_comm.py[line:163] INFO <Response 109 bytes [200 OK]>
+Thread-1 14:34:21 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 14:34:21 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 109
+
+
+Thread-1 14:34:21 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "\u624b\u673a\u53f7\u6ce8\u518c\u6210\u529f"}}
+Thread-1 14:34:21 flask_base.py[line:107] INFO 交易唯一戳[14342100002251]:类型[RSP]:时间[143421]:交易时长[2.80600s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 109
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "\u624b\u673a\u53f7\u6ce8\u518c\u6210\u529f"}}]
+Thread-1 14:45:50 flask_base.py[line:55] INFO 交易唯一戳[14455000002252]:类型[REQ]:时间[144550]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513665949604
+Nonce: 760401
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: e0d77054bb44d9939f81f555a28333211911f800
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513665949589,"MsgType":"event","Event":"CLICK","EventKey":"5001"}]
+Thread-1 14:45:50 flask_base.py[line:156] ERROR 500发生异常
+Thread-1 14:45:50 api_comm.py[line:163] INFO <Response 75 bytes [200 OK]>
+Thread-1 14:45:50 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 14:45:50 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+
+Thread-1 14:45:50 api_comm.py[line:168] INFO {"header": {"message": "", "code": "20001", "description": ""}, "data": {}}
+Thread-1 14:45:50 flask_base.py[line:107] INFO 交易唯一戳[14455000002252]:类型[RSP]:时间[144550]:交易时长[0.00900s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 14:45:50 flask_base.py[line:135] ERROR Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "E:\work_project\micro_office\src\apis\public_plat_request_route_handler.py", line 61, in post
+    return base_request_route_handler('public_plat_apis', 'event_handler', 'module.BasePostClass.post')
+  File "E:\work_project\micro_office\src\apis\api_comm.py", line 55, in base_request_route_handler
+    ret_flag, ol_log_info, module_ret = eval(class_func_name)()
+  File "E:\work_project\micro_office\src\apis\public_plat_apis\event_handler.py", line 49, in post
+    group_id = get_user_group_id(from_user_name)
+  File "E:\work_project\micro_office\src\apis\public_plat_apis\public_plat_api_comm.py", line 93, in get_user_group_id
+    request_url = const.QUERY_GROUP_URL+g.access_token
+AttributeError: _const instance has no attribute 'QUERY_GROUP_URL'
+
+MainThread 14:46:44 flask_base.py[line:15] INFO flask_init
+Thread-1 14:46:48 flask_base.py[line:55] INFO 交易唯一戳[14464800002253]:类型[REQ]:时间[144648]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513666007089
+Nonce: 565382
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 65e7eaeac72cf3a3433d5db4a5714435f8651afc
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513666007082,"MsgType":"event","Event":"CLICK","EventKey":"5001"}]
+Thread-1 14:46:49 api_comm.py[line:163] INFO <Response 121 bytes [200 OK]>
+Thread-1 14:46:49 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 14:46:49 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 121
+
+
+Thread-1 14:46:49 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "\u83b7\u53d6\u7528\u6237\u7ec4\u4fe1\u606f\u5931\u8d25"}}
+Thread-1 14:46:49 flask_base.py[line:107] INFO 交易唯一戳[14464900002253]:类型[RSP]:时间[144649]:交易时长[1.83900s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 121
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "\u83b7\u53d6\u7528\u6237\u7ec4\u4fe1\u606f\u5931\u8d25"}}]
+Thread-1 14:48:35 flask_base.py[line:55] INFO 交易唯一戳[14483500002254]:类型[REQ]:时间[144835]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513666114742
+Nonce: 438848
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 79c0594d5d4a0945f14f9d3dd507bb4c97d5948c
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513666114723,"MsgType":"event","Event":"CLICK","EventKey":"5001"}]
+Thread-1 14:48:36 api_comm.py[line:163] INFO <Response 121 bytes [200 OK]>
+Thread-1 14:48:36 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 14:48:36 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 121
+
+
+Thread-1 14:48:36 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "\u83b7\u53d6\u7528\u6237\u7ec4\u4fe1\u606f\u5931\u8d25"}}
+Thread-1 14:48:36 flask_base.py[line:107] INFO 交易唯一戳[14483600002254]:类型[RSP]:时间[144836]:交易时长[0.64000s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 121
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "\u83b7\u53d6\u7528\u6237\u7ec4\u4fe1\u606f\u5931\u8d25"}}]
+MainThread 14:49:13 flask_base.py[line:15] INFO flask_init
+MainThread 14:49:14 flask_base.py[line:15] INFO flask_init
+Thread-1 14:49:24 flask_base.py[line:55] INFO 交易唯一戳[14492400002255]:类型[REQ]:时间[144924]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513666163217
+Nonce: 607377
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 809104048ca28238afc90afc23ccdfae3f21a060
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513666163210,"MsgType":"event","Event":"CLICK","EventKey":"5001"}]
+Thread-1 14:49:26 api_comm.py[line:163] INFO <Response 121 bytes [200 OK]>
+Thread-1 14:49:26 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 14:49:26 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 121
+
+
+Thread-1 14:49:26 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "\u83b7\u53d6\u7528\u6237\u7ec4\u4fe1\u606f\u5931\u8d25"}}
+Thread-1 14:49:26 flask_base.py[line:107] INFO 交易唯一戳[14492600002255]:类型[RSP]:时间[144926]:交易时长[1.87500s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 121
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "\u83b7\u53d6\u7528\u6237\u7ec4\u4fe1\u606f\u5931\u8d25"}}]
+MainThread 14:51:01 flask_base.py[line:15] INFO flask_init
+Thread-1 14:51:02 flask_base.py[line:55] INFO 交易唯一戳[14510200002256]:类型[REQ]:时间[145102]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513666261302
+Nonce: 252761
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 3c00a3f9d4454cdf49151458fefd336e425c0b89
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513666261295,"MsgType":"event","Event":"CLICK","EventKey":"5001"}]
+Thread-1 14:51:04 flask_base.py[line:156] ERROR 500发生异常
+Thread-1 14:51:04 api_comm.py[line:163] INFO <Response 75 bytes [200 OK]>
+Thread-1 14:51:04 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 14:51:04 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+
+Thread-1 14:51:04 api_comm.py[line:168] INFO {"header": {"message": "", "code": "20001", "description": ""}, "data": {}}
+Thread-1 14:51:04 flask_base.py[line:107] INFO 交易唯一戳[14510400002256]:类型[RSP]:时间[145104]:交易时长[1.88200s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 14:51:04 flask_base.py[line:135] ERROR Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "E:\work_project\micro_office\src\apis\public_plat_request_route_handler.py", line 61, in post
+    return base_request_route_handler('public_plat_apis', 'event_handler', 'module.BasePostClass.post')
+  File "E:\work_project\micro_office\src\apis\api_comm.py", line 55, in base_request_route_handler
+    ret_flag, ol_log_info, module_ret = eval(class_func_name)()
+TypeError: 'NoneType' object is not iterable
+
+Thread-1 14:52:15 flask_base.py[line:55] INFO 交易唯一戳[14521500002257]:类型[REQ]:时间[145215]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513666334927
+Nonce: 223326
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: e3321e4b6824a2c492ab83841457c809b37509db
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513666334920,"MsgType":"event","Event":"CLICK","EventKey":"5001"}]
+Thread-1 14:52:16 flask_base.py[line:156] ERROR 500发生异常
+Thread-1 14:52:16 api_comm.py[line:163] INFO <Response 75 bytes [200 OK]>
+Thread-1 14:52:16 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 14:52:16 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+
+Thread-1 14:52:16 api_comm.py[line:168] INFO {"header": {"message": "", "code": "20001", "description": ""}, "data": {}}
+Thread-1 14:52:16 flask_base.py[line:107] INFO 交易唯一戳[14521600002257]:类型[RSP]:时间[145216]:交易时长[0.57800s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 14:52:16 flask_base.py[line:135] ERROR Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "E:\work_project\micro_office\src\apis\public_plat_request_route_handler.py", line 61, in post
+    return base_request_route_handler('public_plat_apis', 'event_handler', 'module.BasePostClass.post')
+  File "E:\work_project\micro_office\src\apis\api_comm.py", line 55, in base_request_route_handler
+    ret_flag, ol_log_info, module_ret = eval(class_func_name)()
+TypeError: 'NoneType' object is not iterable
+
+Thread-1 14:52:25 flask_base.py[line:55] INFO 交易唯一戳[14522500002258]:类型[REQ]:时间[145225]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513666344395
+Nonce: 174046
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: b19319dd2ae51fd497b92af450bde8653e4b78ac
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513666344386,"MsgType":"event","Event":"CLICK","EventKey":"5001"}]
+Thread-1 14:52:26 flask_base.py[line:156] ERROR 500发生异常
+Thread-1 14:52:26 api_comm.py[line:163] INFO <Response 75 bytes [200 OK]>
+Thread-1 14:52:26 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 14:52:26 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+
+Thread-1 14:52:26 api_comm.py[line:168] INFO {"header": {"message": "", "code": "20001", "description": ""}, "data": {}}
+Thread-1 14:52:26 flask_base.py[line:107] INFO 交易唯一戳[14522600002258]:类型[RSP]:时间[145226]:交易时长[0.66700s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 75
+
+]:响应数据[{"header": {"message": "", "code": "20001", "description": ""}, "data": {}}]
+Thread-1 14:52:26 flask_base.py[line:135] ERROR Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1982, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1614, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1517, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Python27\lib\site-packages\flask\app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "C:\Python27\lib\site-packages\flask\views.py", line 149, in dispatch_request
+    return meth(*args, **kwargs)
+  File "E:\work_project\micro_office\src\apis\public_plat_request_route_handler.py", line 61, in post
+    return base_request_route_handler('public_plat_apis', 'event_handler', 'module.BasePostClass.post')
+  File "E:\work_project\micro_office\src\apis\api_comm.py", line 55, in base_request_route_handler
+    ret_flag, ol_log_info, module_ret = eval(class_func_name)()
+TypeError: 'NoneType' object is not iterable
+
+MainThread 14:54:25 flask_base.py[line:15] INFO flask_init
+Thread-1 14:54:26 flask_base.py[line:55] INFO 交易唯一戳[14542600002259]:类型[REQ]:时间[145426]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513666465772
+Nonce: 938204
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 5713db6166ff5a03e8e059232ff4af60b3bc1395
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513666465766,"MsgType":"event","Event":"CLICK","EventKey":"5001"}]
+Thread-1 14:54:28 api_comm.py[line:163] INFO <Response 91 bytes [200 OK]>
+Thread-1 14:54:28 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 14:54:28 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 91
+
+
+Thread-1 14:54:28 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "\u70b9\u51fb\u83dc\u5355"}}
+Thread-1 14:54:28 flask_base.py[line:107] INFO 交易唯一戳[14542800002259]:类型[RSP]:时间[145428]:交易时长[1.85000s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 91
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "\u70b9\u51fb\u83dc\u5355"}}]
+MainThread 14:54:53 flask_base.py[line:15] INFO flask_init
+MainThread 14:55:48 flask_base.py[line:15] INFO flask_init
+MainThread 14:56:13 flask_base.py[line:15] INFO flask_init
+Thread-1 14:56:23 flask_base.py[line:55] INFO 交易唯一戳[14562300002260]:类型[REQ]:时间[145623]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513666582789
+Nonce: 995023
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 84001a248fc4d517ce32a4d4bc97cd0c17ea678f
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513666582782,"MsgType":"event","Event":"CLICK","EventKey":"1701"}]
+Thread-1 14:56:25 api_comm.py[line:163] INFO <Response 91 bytes [200 OK]>
+Thread-1 14:56:25 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 14:56:25 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 91
+
+
+Thread-1 14:56:25 api_comm.py[line:168] INFO {"touser": "100099671", "msgtype": "text", "text": {"content": "\u70b9\u51fb\u83dc\u5355"}}
+Thread-1 14:56:25 flask_base.py[line:107] INFO 交易唯一戳[14562500002260]:类型[RSP]:时间[145625]:交易时长[1.75500s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 91
+
+]:响应数据[{"touser": "100099671", "msgtype": "text", "text": {"content": "\u70b9\u51fb\u83dc\u5355"}}]
+MainThread 15:06:19 flask_base.py[line:15] INFO flask_init
+MainThread 15:08:02 flask_base.py[line:15] INFO flask_init
+MainThread 15:08:43 flask_base.py[line:15] INFO flask_init
+MainThread 15:08:52 flask_base.py[line:15] INFO flask_init
+MainThread 15:14:54 flask_base.py[line:15] INFO flask_init
+MainThread 15:18:58 flask_base.py[line:15] INFO flask_init
+MainThread 15:19:00 flask_base.py[line:15] INFO flask_init
+MainThread 15:25:15 flask_base.py[line:15] INFO flask_init
+MainThread 15:25:42 flask_base.py[line:15] INFO flask_init
+MainThread 15:26:08 flask_base.py[line:15] INFO flask_init
+MainThread 15:31:00 flask_base.py[line:15] INFO flask_init
+MainThread 15:31:02 flask_base.py[line:15] INFO flask_init
+MainThread 15:31:11 flask_base.py[line:15] INFO flask_init
+MainThread 15:31:29 flask_base.py[line:15] INFO flask_init
+MainThread 15:31:41 flask_base.py[line:15] INFO flask_init
+MainThread 15:38:55 flask_base.py[line:15] INFO flask_init
+MainThread 15:38:56 flask_base.py[line:15] INFO flask_init
+Thread-1 15:39:26 flask_base.py[line:55] INFO 交易唯一戳[15392600002261]:类型[REQ]:时间[153926]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513669165195
+Nonce: 702207
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: d07024f748c6907244046c363c28c2a1ff6dc775
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513669165187,"MsgType":"event","Event":"CLICK","EventKey":"1701"}]
+Thread-1 15:39:28 api_comm.py[line:163] INFO <Response 197 bytes [200 OK]>
+Thread-1 15:39:28 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 15:39:28 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 197
+
+
+Thread-1 15:39:28 api_comm.py[line:168] INFO {"msgtype": "news", "touser": "100099671", "news": {"articles": [{"url": "http://168.40.5.23:8002/SenchaTouch/Demo/form/index.html", "description": "Is Really A Happy Day", "title": "Happy Day"}]}}
+Thread-1 15:39:28 flask_base.py[line:107] INFO 交易唯一戳[15392800002261]:类型[RSP]:时间[153928]:交易时长[1.78100s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 197
+
+]:响应数据[{"msgtype": "news", "touser": "100099671", "news": {"articles": [{"url": "http://168.40.5.23:8002/SenchaTouch/Demo/form/index.html", "description": "Is Really A Happy Day", "title": "Happy Day"}]}}]
+MainThread 15:42:14 flask_base.py[line:15] INFO flask_init
+MainThread 15:43:59 flask_base.py[line:15] INFO flask_init
+MainThread 15:44:41 flask_base.py[line:15] INFO flask_init
+MainThread 15:44:52 flask_base.py[line:15] INFO flask_init
+MainThread 15:46:28 flask_base.py[line:15] INFO flask_init
+MainThread 15:46:51 flask_base.py[line:15] INFO flask_init
+MainThread 15:47:06 flask_base.py[line:15] INFO flask_init
+MainThread 15:47:25 flask_base.py[line:15] INFO flask_init
+MainThread 15:47:45 flask_base.py[line:15] INFO flask_init
+MainThread 15:49:44 flask_base.py[line:15] INFO flask_init
+MainThread 15:51:34 flask_base.py[line:15] INFO flask_init
+MainThread 15:51:45 flask_base.py[line:15] INFO flask_init
+MainThread 15:51:57 flask_base.py[line:15] INFO flask_init
+Thread-1 15:52:04 flask_base.py[line:55] INFO 交易唯一戳[15520400002262]:类型[REQ]:时间[155204]:交易时长[0]毫秒:请求url[http://168.40.5.23:8002/]:请求头[Timestamp: 1513669923578
+Nonce: 361832
+Content-Length: 135
+User-Agent: Jakarta Commons-HttpClient/3.1-rc1
+Signature: 4dfb24e88ac8951a0575b6fe5b67605c56e13b08
+Echostr: spy0578
+Host: 168.40.5.23:8002
+X-Forwarded-For: 10.0.23.178
+Content-Type: application/json; charset=UTF-8
+
+]:请求数据[{"ToUserName":"600000000112","FromUserName":"100099671","CreateTime":1513669923571,"MsgType":"event","Event":"CLICK","EventKey":"1701"}]
+Thread-1 15:52:06 api_comm.py[line:163] INFO <Response 2 bytes [200 OK]>
+Thread-1 15:52:06 api_comm.py[line:164] INFO <class 'flask.wrappers.Response'>
+Thread-1 15:52:06 api_comm.py[line:165] INFO Content-Type: text/html; charset=utf-8
+Content-Length: 2
+
+
+Thread-1 15:52:06 api_comm.py[line:168] INFO {}
+Thread-1 15:52:06 flask_base.py[line:107] INFO 交易唯一戳[15520600002262]:类型[RSP]:时间[155206]:交易时长[2.21700s]毫秒:响应头[Content-Type: text/html; charset=utf-8
+Content-Length: 2
+
+]:响应数据[{}]
