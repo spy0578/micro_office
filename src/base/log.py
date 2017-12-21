@@ -15,7 +15,6 @@ from etc.config import *
 LOG_NAME = 'MyLogger1'
 #Bytes
 MAX_LOG_FILE_SIZE = 100000
-DEFAULT_LOG_LEVEL = logging.DEBUG
 ###NOT SURE, MAX FILE NUM??###
 MAX_LOG_FILE_NUM = 15
 
@@ -40,7 +39,7 @@ class LogBase():
         print "__init__"
 
 
-    def init_log(self, log_level, log_file_name, dir_pre, dir_post):
+    def init_log(self, log_level, log_file_name, dir_pre, dir_post, apscheduler_flag=False):
 
         self.log_level = log_level
         self.log_file_name = log_file_name
@@ -51,7 +50,11 @@ class LogBase():
         self.currDate = now.strftime('%Y%m%d')
 
 
-        self.sysLog = logging.getLogger(self.log_file_name)
+        if apscheduler_flag is True :
+            self.sysLog = logging.getLogger('apscheduler.executors.default')
+        else:
+            self.sysLog = logging.getLogger(log_file_name)
+        print 'self.sysLog:[%s]' % self.sysLog
         self.sysLog.setLevel(self.log_level)
 
 
@@ -109,5 +112,5 @@ class LogBase():
 init log
 '''
 g_log=LogBase()
-
+g_task_log = LogBase()
 

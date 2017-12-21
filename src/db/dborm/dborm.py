@@ -14,8 +14,8 @@ class TblParaStatInfo(Base):
     para_stat_id    = Column(Integer, primary_key=True)        
     para_type_id    = Column(Integer, nullable=False)             #参数类型id 
     figure          = Column(Numeric(8, 2), nullable=False)       #数值
-    figure_date     = Column(Date, nullable=False)                #数据产生日期
-    figure_time     = Column(Integer, nullable=False)             #数据产生时间
+    figure_date     = Column(String(8), nullable=False)                #数据产生日期
+    figure_time     = Column(String(6), nullable=False)             #数据产生时间
     remark          = Column(String(60), nullable=False)
     last_upd_dttm   = Column(DateTime, nullable=False)
     record_stat     = Column(String(1), nullable=False)
@@ -26,6 +26,7 @@ class TblParaTypeInfo(Base):
 
     para_type_id    = Column(Integer, primary_key=True)          
     para_type_name  = Column(String(60), nullable=False)          #总存款、总个人存款等
+    para_unit       = Column(String(20), nullable=False)          #亿人民币
     remark          = Column(String(60), nullable=False)
     last_upd_dttm   = Column(DateTime, nullable=False)
     record_stat     = Column(String(1), nullable=False)
