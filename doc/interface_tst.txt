@@ -12,28 +12,54 @@ http://168.40.5.23:8002/?signature=304578ebcf18c6ff00989e94400b6d63a6b50bb9&time
 3. 将图片推送到云平台（调用接口https://ucp.cib.com.cn:9016/media/upload.action），得到图片id
 4. 根据数据生成文字信息或表格的html代码，配合图片id，推送给响应组用户
 
+delete from tbl_ret_code_info where 1=1;
+insert into tbl_ret_code_info values('00000', '成功', ' ', '2017-12-22 14:42:06', '1');
 
-insert into tbl_para_stat_info values(0, 0, 2112.21, '20171221', '144444', ' ', '20171221212212', '1');
-insert into tbl_para_stat_info values(1, 1, 3.01, '20171221', '144444', ' ', '20171221212212', '1');
-insert into tbl_para_stat_info values(2, 2, 1939.11, '20171221', '144444', ' ', '20171221212212', '1');
-insert into tbl_para_stat_info values(3, 3, 0.27, '20171221', '144444', ' ', '20171221212212', '1');
-insert into tbl_para_stat_info values(4, 4, 168.10, '20171221', '144444', ' ', '20171221212212', '1');
-insert into tbl_para_stat_info values(5, 5, 2.74, '20171221', '144444', ' ', '20171221212212', '1');
-insert into tbl_para_stat_info values(6, 6, 1698.14, '20171221', '144444', ' ', '20171221212212', '1');
-insert into tbl_para_stat_info values(7, 7, 3.41, '20171221', '144444', ' ', '20171221212212', '1');
-insert into tbl_para_stat_info values(8, 8, 10.99, '20171221', '144444', ' ', '20171221212212', '1');
-insert into tbl_para_stat_info values(9, 9, 0.12, '20171221', '144444', ' ', '20171221212212', '1');
+delete from tbl_para_stat_info where 1=1;
+insert into tbl_para_stat_info values(0, 0, 2112.21, '20171220', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(1, 1, 3.01, '20171220', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(2, 2, 1939.11, '20171220', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(3, 3, 0.27, '20171220', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(4, 4, 168.10, '20171220', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(5, 5, 2.74, '20171220', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(6, 6, 1698.14, '20171220', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(7, 7, 3.41, '20171220', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(8, 8, 10.99, '20171220', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(9, 9, 0.12, '20171220', '144444', ' ', '2017-12-22 14:42:06', '1');
 
-insert into tbl_para_type_info values(0, '人民币总存款', '亿人民币', ' ', '20171221212212', '1');
-insert into tbl_para_type_info values(1, '人民币总存款变化', '亿人民币', ' ', '20171221212212', '1');
-insert into tbl_para_type_info values(2, '人民币对公存款', '亿人民币', ' ', '20171221212212', '1');
-insert into tbl_para_type_info values(3, '人民币对公存款变化', '亿人民币', ' ', '20171221212212', '1');
-insert into tbl_para_type_info values(4, '人民币个人存款', '亿人民币', ' ', '20171221212212', '1');
-insert into tbl_para_type_info values(5, '人民币个人存款变化', '亿人民币', ' ', '20171221212212', '1');
-insert into tbl_para_type_info values(6, '人民币纯贷款', '亿人民币', ' ', '20171221212212', '1');
-insert into tbl_para_type_info values(7, '人民币纯贷款变化', '亿人民币', ' ', '20171221212212', '1');
-insert into tbl_para_type_info values(8, '人民币贴现', '亿人民币', ' ', '20171221212212', '1');
-insert into tbl_para_type_info values(9, '人民币贴现变化', '亿人民币', ' ', '20171221212212', '1');
+insert into tbl_para_stat_info values(10, 0, 2118, '20171221', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(11, 1, 6.01, '20171221', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(12, 2, 1929.11, '20171221', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(13, 3, 1.27, '20171221', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(14, 4, 268.10, '20171221', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(15, 5, 12.74, '20171221', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(16, 6, 1631.14, '20171221', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(17, 7, 5.41, '20171221', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(18, 8, 14, '20171221', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(19, 9, 0.12, '20171221', '144444', ' ', '2017-12-22 14:42:06', '1');
+
+insert into tbl_para_stat_info values(20, 0, 2192.21, '20171222', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(21, 1, 3.01, '20171222', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(22, 2, 1949.11, '20171222', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(23, 3, 0.27, '20171222', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(24, 4, 161.10, '20171222', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(25, 5, 2.74, '20171222', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(26, 6, 1648.14, '20171222', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(27, 7, 3.41, '20171222', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(28, 8, 10.00, '20171222', '144444', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_stat_info values(29, 9, 0.12, '20171222', '144444', ' ', '2017-12-22 14:42:06', '1');
+
+delete from tbl_para_type_info where 1=1;
+insert into tbl_para_type_info values(0, '人民币总存款', '亿人民币', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_type_info values(1, '人民币总存款变化', '亿人民币', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_type_info values(2, '人民币对公存款', '亿人民币', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_type_info values(3, '人民币对公存款变化', '亿人民币', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_type_info values(4, '人民币个人存款', '亿人民币', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_type_info values(5, '人民币个人存款变化', '亿人民币', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_type_info values(6, '人民币纯贷款', '亿人民币', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_type_info values(7, '人民币纯贷款变化', '亿人民币', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_type_info values(8, '人民币贴现', '亿人民币', ' ', '2017-12-22 14:42:06', '1');
+insert into tbl_para_type_info values(9, '人民币贴现变化', '亿人民币', ' ', '2017-12-22 14:42:06', '1');
 
 
 

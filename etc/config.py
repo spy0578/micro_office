@@ -24,9 +24,6 @@ class DevelopmentConfig(Config):
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD') 
 
-    SQLALCHEMY_URI              = os.environ.get('DEV_SQLALCHEMY_URL') or \
-                                                 'sqlite:///../db/sqlalchemy.db'
-
     REDIS_URI       = os.environ.get('DEV_REDIS_URI') or \
                                      '127.0.0.1'
     REDIS_PORT      = os.environ.get('DEV_REDIS_PORT') or \
@@ -63,21 +60,26 @@ class DevelopmentConfig(Config):
 
         SERVER_IP = os.environ.get('SERVER_IP') or \
                     '168.40.5.23'
-        
+        SQLALCHEMY_URI              = os.environ.get('DEV_SQLALCHEMY_URL') or \
+                                                 'sqlite:///../db/sqlalchemy.db'
+
+       
     elif(Config.sysstr =="Linux"):
         print ("Linux")
         WEB_SERVER_LOG_FILE_DIR_PRE = os.environ.get('WEB_SERVER_LOG_FILE_DIR_PRE') or \
-                                         '/home/cib/lab/micro_office/log'
+                                         '/home/guozl/lab/micro_office/log'
 
         STATIC_TEMPLATE_FOLDER = os.environ.get('STATIC_TEMPLATE_FOLDER') or \
-                                         '/home/cib/lab/micro_office/web'
+                                         '/home/guozl/lab/micro_office/web'
 
         TASK_LOG_FILE_DIR_PRE = os.environ.get('TASK_LOG_FILE_DIR_PRE') or \
-                                '/home/cib/lab/micro_office/log'
+                                '/home/guozl/lab/micro_office/log'
 
         SERVER_IP = os.environ.get('SERVER_IP') or \
-                    '168.40.63.87'
+                    '168.40.63.132'
 
+        SQLALCHEMY_URI              = os.environ.get('DEV_SQLALCHEMY_URL') or \
+                                                 'sqlite:////home/guozl/lab/micro_office/db/sqlalchemy.db'
     else:
         print ("others")
         WEB_SERVER_LOG_FILE_DIR_PRE = os.environ.get('WEB_SERVER_LOG_FILE_DIR_PRE') or \
@@ -92,6 +94,10 @@ class DevelopmentConfig(Config):
         SERVER_IP = os.environ.get('SERVER_IP') or \
                     '168.40.5.23'
 
+        SQLALCHEMY_URI              = os.environ.get('DEV_SQLALCHEMY_URL') or \
+                                                 'sqlite:///../db/sqlalchemy.db'
+
+
     WEB_SERVER_LOG_FILE_DIR_POST  = os.environ.get('WEB_SERVER_LOG_FILE_DIR_POST') or \
                                      'web_txn'
 
@@ -99,23 +105,28 @@ class DevelopmentConfig(Config):
                                     'task'
 
     POSITION_DATA_FTP_HOST = os.environ.get('POSITION_DATA_FTP') or \
-                                    '168.40.63.87'
+                                    '168.40.63.132'
     POSITION_DATA_FTP_PORT = os.environ.get('POSITION_DATA_PORT') or \
                                     '21'
     POSITION_DATA_FTP_USERNAME = os.environ.get('POSITION_DATA_USERNAME') or \
-                                    'cib'
+                                    'guozl'
     POSITION_DATA_FTP_PASSWORD = os.environ.get('POSITION_DATA_PASSWORD') or \
-                                    'cib'
+                                    'guozl'
 
     POSITION_DATA_FLAG_FILE = os.environ.get('POSITION_DATA_FLAG_FILE') or \
                                     'tst_file.flg'
     POSITION_DATA_FILE = os.environ.get('POSITION_DATA_FILE') or \
                                     'tst_file'
     POSITION_DATA_FILE_DIR = os.environ.get('POSITION_DATA_FILE_DIR') or \
-                                    '/home/cib/lab/ftp_dir/'
+                                    '/home/guozl/lab/ftp_dir/'
     POSITION_DATA_LOCAL_FILE_DIR = os.environ.get('POSITION_DATA_LOCAL_FILE_DIR') or \
-                                    '/home/cib/lab/local/'
+                                    '/home/guozl/lab/local/'
+    POSITION_DATA_DONE_FILE = os.environ.get('POSITION_DATA_DONE_FILE') or \
+                                    'tst_file.done'
 
+    #折线图展示几天内的数据，包括当日
+    POSITION_DATA_LINE_CHARTS_DAYS = os.environ.get('POSITION_DATA_LINE_CHARTS_DAYS') or \
+                                    3
 
 
 

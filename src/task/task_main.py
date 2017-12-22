@@ -1,75 +1,32 @@
 #-*- coding:utf-8 -*-
-from apscheduler.schedulers.background import BackgroundScheduler, BlockingScheduler
-from apscheduler.jobstores.sqlalchemy import SQLAlchemyJobStore
-from apscheduler.executors.pool import ThreadPoolExecutor, ProcessPoolExecutor
-from apscheduler.triggers.interval import IntervalTrigger
+from task_init import g_task
 from apscheduler.triggers.cron import CronTrigger
 from apscheduler.triggers.date import DateTrigger
-import time
+from get_position_data  import *
+from resume_jobs import *
+from draw_line_chart import *
+import datetime
 
-import sys
-sys.path.append("..")
-sys.path.append("../..")
+scheduler = g_task.get_scheduler()
 
-from etc.config import *
-from base.design_pattern.singleton import Singleton
-from base.log import g_task_log
-#from task.day_end_task import *
-#from tst_task  import *
-#from tst_task2 import *
+'''
+    resume_jobs  设置在凌晨2点运行，确保所有任务可以正常执行
+    
+    get_position_data
+        从ftp服务器获取头寸数据，并保存在表中
 
+    draw_line_chart
+'''
 
-jobstores = {
-    'default': SQLAlchemyJobStore(url='sqlite:///jobs.sqlite')
-}
-executors = {
-    'default': ThreadPoolExecutor(1),
-}
-job_defaults = {
-    'coalesce': True,
-    'max_instances': 1
-}
+#scheduler.add_job(get_position_data, trigger=CronTrigger(hour='*', minute='*', second='*/5'), id='get_position_data')
+scheduler.add_job(draw_line_chart, trigger=CronTrigger(hour='*', minute='*', second='*/5'), id='draw_line_chart')
+scheduler.add_job(resume_jobs, trigger=DateTrigger(run_date=datetime.datetime.now() + datetime.timedelta(seconds=20)), id='resume_jobs')
 
-class Task(Singleton) :
-    scheduler = None
-
-    def get_scheduler(self):
-        return self.scheduler
-
-
-    def init_task(self):
-        print 'task init'
-        self.scheduler = BackgroundScheduler(jobstores=jobstores, executors=executors, job_defaults=job_defaults)
-
-        '''
-         start add jobs
-         check if jobstores has these jobs
-        #if self.scheduler.get_job('day_end_task') is None :
-        #    self.scheduler.add_job(day_end_task, trigger='cron', args=None, id='day_end_task', hour='0') # using unix cron
-        '''
-        '''
-        if self.scheduler.get_job('tick6') is None :
-            trigger1 = CronTrigger(hour='*', minute='*', second='*/10')
-            self.scheduler.add_job(tick1, trigger=trigger1, id='tick1')
-            #self.scheduler.add_job(tick2, trigger='cron', id='tick2', second='*/5', hour='*')  # tst job
-
-        self.scheduler.start()
-        try:
-            while True:
-                time.sleep(2)
-                print 'sleep'
-        except(KeyboardInterrupt, SystemExit):
-            self.scheduler.shutdown()
-            print 'exit the job'
-        '''
-
-g_task_log.init_log(configs[config_type].TASK_LOG_LEVEL, configs[config_type].TASK_LOG_FILE_NAME, 
-               configs[config_type].TASK_LOG_FILE_DIR_PRE, configs[config_type].TASK_LOG_FILE_DIR_POST, True)
-
-print 'task_main g_task_log:[%s]' % g_task_log
-log=g_task_log.get_sys_log()
-print 'task_main log:[%s]' % log
-
-#init task
-g_task=Task()
-g_task.init_task()
+scheduler.start()
+try:
+    while True:
+        time.sleep(2)
+        print 'sleep'
+except(KeyboardInterrupt, SystemExit):
+    scheduler.shutdown()
+    print 'exit the job'
